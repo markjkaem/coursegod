@@ -1,7 +1,8 @@
 .wrapper {
   display: flex;
-  align-items: center;
+  align-items: center;  
   justify-content: space-between;
+  height: 100;
 }
 
 .logo {
@@ -11,6 +12,11 @@
   display: block;
 }
 
+.header{
+  height: 100px;
+  align-items: center;
+  display: flex;
+}
 .header ul {
   margin: 0;
   padding: 0;

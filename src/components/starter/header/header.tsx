@@ -1,41 +1,48 @@
 import { component$ } from "@builder.io/qwik";
-import { QwikLogo } from "../icons/qwik";
 import styles from "./header.module.css";
+import { Form, Link } from "@builder.io/qwik-city";
+import { useAuthSession, useAuthSignout } from "~/routes/plugin@auth";
 
 export default component$(() => {
+  const session = useAuthSession();
+  const signOut = useAuthSignout();
   return (
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
-          <a href="/" title="qwik">
-            <QwikLogo height={50} width={143} />
+          <a class="text-3xl font-bold text-white" href="/" title="qwik">
+            The Money Whale ©
           </a>
         </div>
         <ul>
-          <li>
-            <a
-              href="https://qwik.builder.io/docs/components/overview/"
-              target="_blank"
-            >
-              Docs
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://qwik.builder.io/examples/introduction/hello-world/"
-              target="_blank"
-            >
-              Examples
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://qwik.builder.io/tutorial/welcome/overview/"
-              target="_blank"
-            >
-              Tutorials
-            </a>
-          </li>
+          {!session.value?.user?.name ? (
+            <>
+              <li>
+                <Link class="text-xl" href="/sign-up" target="_blank">
+                  Sign-up
+                </Link>
+              </li>{" "}
+              <li>
+                <Link class="text-xl" href="/sign-in" target="_blank">
+                  Sign-in
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link href="/account" class="text-lg">
+                  Hi, {session.value?.user?.name}
+                </Link>
+              </li>{" "}
+              <li>
+                <Form action={signOut}>
+                  <input type="hidden" name="callbackUrl" />
+                  <button class="px-4 py-2 text-black">Sign Out</button>
+                </Form>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </header>
