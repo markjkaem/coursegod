@@ -1,4 +1,3 @@
-import { drizzle } from 'drizzle-orm/neon-http';
 import { serverAuth$ } from "@builder.io/qwik-auth";
 import Google from "@auth/core/providers/google";
 import type { Provider } from "@auth/core/providers";
