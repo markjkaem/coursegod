@@ -3,9 +3,12 @@ import { component$ } from "@builder.io/qwik";
 import { RequestHandler } from "@builder.io/qwik-city";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_TEST_KEY!, {
-  apiVersion: "2023-10-16",
-});
+const stripe = new Stripe(
+  "sk_test_51L34nrJ0Tu9paWkW9sF0gCPGB55l3fncgRlFJmF2Lcr4xEUdCMuUtQnYang1GsxdZAmw9AaTC6vHgJHPhNMAsDDA000WqYNd73",
+  {
+    apiVersion: "2023-10-16",
+  },
+);
 export const onRequest: RequestHandler = async ({
   //   sharedMap,
   headers,
