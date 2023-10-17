@@ -6,6 +6,7 @@ import Hero from "~/components/starter/hero/hero";
 import Pricing from "~/components/starter/pricing/pricing";
 import Banner from "~/components/starter/banner/banner";
 import Faq from "~/components/starter/faq/faq";
+import Companies from "~/components/starter/companies/companies";
 
 export default component$(() => {
   return (
@@ -19,6 +20,7 @@ export default component$(() => {
         <Services />
       </div>
       <Pricing />
+      <Companies />
       <div class="container-center container-spacing-xl container">
         <Faq />
       </div>

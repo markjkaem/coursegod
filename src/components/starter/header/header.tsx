@@ -10,18 +10,13 @@ export default component$(() => {
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
-          <a class="text-3xl font-bold text-white" href="/" title="qwik">
-            The Money Whale ©
+          <a class="text-xl font-bold text-white" href="/" title="qwik">
+            MW
           </a>
         </div>
         <ul>
           {!session.value?.user?.name ? (
             <>
-              <li>
-                <Link class="text-xl" href="/sign-up" target="_blank">
-                  Sign-up
-                </Link>
-              </li>{" "}
               <li>
                 <Link class="text-xl" href="/sign-in" target="_blank">
                   Sign-in
@@ -31,8 +26,8 @@ export default component$(() => {
           ) : (
             <>
               <li>
-                <Link href="/account" class="text-lg">
-                  Hi, {session.value?.user?.name}
+                <Link href="/dashboard/overview" class="text-lg">
+                  Dashboard
                 </Link>
               </li>{" "}
               <li>
