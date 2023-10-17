@@ -25,7 +25,7 @@ export default component$(() => {
   return (
     <>
       <div>
-        <span>Payment handling</span>
+        <span>Payment handling!</span>
       </div>
     </>
   );
