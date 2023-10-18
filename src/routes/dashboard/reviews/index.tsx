@@ -43,7 +43,7 @@ export const useAddUser = routeAction$(
 
     return {
       success: true,
-      review: "Added succesfully",
+      review: "Added succesfully: " + data.message.toString(),
     };
   },
 );
@@ -52,8 +52,17 @@ export default component$(() => {
   return (
     <>
       <Form class="flex w-80 flex-col gap-2" action={action}>
-        <input class="text-black" type="text" name="message" required />
-        <button type="submit">Add review</button>
+        <label class="font-bold">Message (max 100 char.):</label>
+        <input
+          class="rounded-sm px-2 py-2 text-black"
+          type="text"
+          name="message"
+          required
+          maxLength={100}
+        />
+        <button class="bg-white px-4 py-2 text-black" type="submit">
+          Add review
+        </button>
       </Form>
       {action.value?.success ? (
         <p>{action?.value?.review}</p>

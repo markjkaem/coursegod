@@ -20,9 +20,7 @@ export default component$(({ reviews }: any) => {
           Testimonials
         </h3>
         <p class="mb-6 pb-2 md:mb-12 md:pb-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
-          amet numquam iure provident voluptate esse quasi, veritatis totam
-          voluptas nostrum quisquam eum porro a pariatur veniam.
+          Read what subscribed users say about this website.
         </p>
       </div>
 
