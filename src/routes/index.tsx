@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
 
 import Services from "~/components/starter/services/services";
 import Hero from "~/components/starter/hero/hero";
@@ -7,8 +7,20 @@ import Pricing from "~/components/starter/pricing/pricing";
 import Banner from "~/components/starter/banner/banner";
 import Faq from "~/components/starter/faq/faq";
 import Companies from "~/components/starter/companies/companies";
+import Review from "~/components/starter/review";
+import { reviews } from "../../drizzle/schema";
+import db from "../../drizzle/db";
+
+export const useReviews = routeLoader$(async () => {
+  const Allreviews = await db.select().from(reviews);
+
+  return {
+    reviews: Allreviews,
+  };
+});
 
 export default component$(() => {
+  const reviews = useReviews();
   return (
     <>
       <div role="presentation" class="ellipsis"></div>
@@ -22,8 +34,9 @@ export default component$(() => {
       <Pricing />
       <Companies />
       <div class="container-center container-spacing-xl container">
-        <Faq />
+        <Review reviews={reviews.value} />
       </div>
+      <Faq />
     </>
   );
 });

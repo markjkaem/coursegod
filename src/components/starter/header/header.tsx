@@ -1,18 +1,26 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./header.module.css";
-import { Form, Link } from "@builder.io/qwik-city";
-import { useAuthSession, useAuthSignout } from "~/routes/plugin@auth";
+import { Link } from "@builder.io/qwik-city";
+import { useAuthSession } from "~/routes/plugin@auth";
+import { Image } from "@unpic/qwik";
 
 export default component$(() => {
   const session = useAuthSession();
-  const signOut = useAuthSignout();
+
   return (
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
           <Link href="/">
             {" "}
-            <img class="h-10 w-10" src="/MWlogo.png" alt="MW" />
+            <Image
+              layout="constrained"
+              width={200}
+              height={200}
+              class="h-10 w-10"
+              src="/MWlogo.png"
+              alt="MW"
+            />
           </Link>
         </div>
         <ul>
@@ -32,10 +40,18 @@ export default component$(() => {
                 </Link>
               </li>{" "}
               <li>
-                <Form action={signOut}>
-                  <input type="hidden" name="callbackUrl" />
-                  <button class="px-4 py-2 text-black">Sign Out</button>
-                </Form>
+                <Link href="/dashboard/settings">
+                  {" "}
+                  <Image
+                    layout="constrained"
+                    width={200}
+                    height={200}
+                    class="h-8 w-8 cursor-pointer rounded-full transition hover:scale-95"
+                    aria-label="My account"
+                    src={`${session.value.user.image as string}`}
+                    alt="avatar"
+                  />
+                </Link>
               </li>
             </>
           )}

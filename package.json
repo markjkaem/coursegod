@@ -55,10 +55,11 @@
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.4",
     "@neondatabase/serverless": "^0.6.0",
+    "@unpic/qwik": "^0.0.27",
     "dotenv": "^16.3.1",
     "drizzle-orm": "^0.27.2",
     "drizzle-zod": "^0.4.4",
-    "stripe": "^14.0.0",
-    "pg": "^8.11.2"
+    "pg": "^8.11.2",
+    "stripe": "^14.0.0"
   }
 }

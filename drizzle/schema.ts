@@ -3,7 +3,8 @@ import {
   pgTable,
   text,
   primaryKey,
-  integer
+  integer,
+  serial,
 } from "drizzle-orm/pg-core"
 import type { AdapterAccount } from "@auth/core/adapters"
 
@@ -57,3 +58,16 @@ export const verificationTokens = pgTable(
     compoundKey: primaryKey(vt.identifier, vt.token)
   })
 )
+
+export const reviews = pgTable("reviews",
+{
+  id: serial("id").primaryKey().unique(),
+  userId: text("userId")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  title: text("title"),
+  message: text("message"),
+  rating: integer("rating"),
+  image: text("image"),
+  name: text("name")
+})

@@ -12,6 +12,7 @@ specifiers:
   '@types/pg': ^8.10.5
   '@typescript-eslint/eslint-plugin': 6.2.0
   '@typescript-eslint/parser': 6.2.0
+  '@unpic/qwik': ^0.0.27
   autoprefixer: ^10.4.14
   dotenv: ^16.3.1
   drizzle-kit: ^0.19.13
@@ -35,6 +36,7 @@ specifiers:
 dependencies:
   '@auth/drizzle-adapter': 0.3.4
   '@neondatabase/serverless': 0.6.0
+  '@unpic/qwik': 0.0.27_@builder.io+qwik@1.2.13
   dotenv: 16.3.1
   drizzle-orm: 0.27.2_lso4e7dix7mzqc7wbqimenx5du
   drizzle-zod: 0.4.4_drizzle-orm@0.27.2
@@ -1367,7 +1369,6 @@ packages:
     dependencies:
       csstype: 3.1.2
       undici: 5.22.1
-    dev: true
 
   /@cloudflare/kv-asset-handler/0.2.0:
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
@@ -2648,6 +2649,15 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
+  /@unpic/qwik/0.0.27_@builder.io+qwik@1.2.13:
+    resolution: {integrity: sha512-g2qMgGY9RTfNj0gZE7BjuotrdKYRZWVjYc5h6dURFJjjAw/Gw2UvgNdRPG4miST9nvGawgmJNnQs1gshzLt10w==}
+    engines: {node: '>=15.0.0'}
+    peerDependencies:
+      '@builder.io/qwik': '*'
+    dependencies:
+      '@builder.io/qwik': 1.2.13_undici@5.22.1
+    dev: false
+
   /@vanilla-extract/babel-plugin-debug-ids/1.0.3:
     resolution: {integrity: sha512-vm4jYu1xhSa6ofQ9AhIpR3DkAp4c+eoR1Rpm8/TQI4DmWbmGbOjYRcqV0aWsfaIlNhN4kFuxFMKBNN9oG6iRzA==}
     dependencies:
@@ -3360,7 +3370,6 @@ packages:
     engines: {node: '>=10.16.0'}
     dependencies:
       streamsearch: 1.1.0
-    dev: true
 
   /bytes/3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
@@ -3746,7 +3755,6 @@ packages:
 
   /csstype/3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
-    dev: true
 
   /d/1.0.1:
     resolution: {integrity: sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==}
@@ -8238,7 +8246,6 @@ packages:
   /streamsearch/1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
     engines: {node: '>=10.0.0'}
-    dev: true
 
   /streamx/2.15.1:
     resolution: {integrity: sha512-fQMzy2O/Q47rgwErk/eGeLu/roaFWV0jVsogDmrszM9uIw8L5OA+t+V93MgYlufNptfjmYR1tOMWhei/Eh7TQA==}
@@ -8754,7 +8761,6 @@ packages:
     engines: {node: '>=14.0'}
     dependencies:
       busboy: 1.6.0
-    dev: true
 
   /unicode-canonical-property-names-ecmascript/2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
