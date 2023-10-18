@@ -23,7 +23,7 @@ export default component$(() => {
   return (
     <>
       <div class="grid grid-cols-1 justify-center gap-10 p-4 md:grid-cols-3 ">
-        <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
+        <div class="max-w-sm rounded-lg border border-gray-200 p-6 shadow">
           <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Course 1

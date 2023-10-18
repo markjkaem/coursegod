@@ -22,11 +22,11 @@ export default component$(() => {
   const hasAccesToCourses = subscriptionStatus.value.courses ?? false;
   return (
     <div class="flex min-h-screen w-screen ">
-      <div class="w-3/12">
+      <div class="md:w-3/12">
         {" "}
         <Sidebar hasAccesToCourses={hasAccesToCourses as any} />
       </div>
-      <div class="w-9/12 p-6">
+      <div class="p-6 md:w-9/12">
         <Slot />
       </div>
     </div>
