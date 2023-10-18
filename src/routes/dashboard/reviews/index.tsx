@@ -4,6 +4,25 @@ import { Session } from "@auth/core/types";
 import { reviews, users } from "../../../../drizzle/schema";
 import db from "../../../../drizzle/db";
 import { eq } from "drizzle-orm";
+import { RequestHandler } from "@builder.io/qwik-city";
+import { currentSubscription } from "~/ultils/subscriptions";
+
+export const onRequest: RequestHandler = async ({
+  sharedMap,
+  redirect,
+  url,
+}) => {
+  const authSession: Session | null = sharedMap.get("session");
+  if (!authSession || new Date(authSession.expires) < new Date()) {
+    throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
+  }
+  const email = authSession.user?.email;
+  const response = await currentSubscription(email as string);
+  const hasPageAcces = response.courses;
+  if (!hasPageAcces) {
+    throw redirect(303, "/dashboard/subscriptions");
+  }
+};
 
 export const useAddUser = routeAction$(
   async (data, { sharedMap, url, redirect }) => {
@@ -54,13 +73,13 @@ export default component$(() => {
       <Form class="flex w-80 flex-col gap-2" action={action}>
         <label class="font-bold">Message (max 100 char.):</label>
         <input
-          class="rounded-sm px-2 py-2 text-black"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           type="text"
           name="message"
           required
           maxLength={100}
         />
-        <button class="bg-white px-4 py-2 text-black" type="submit">
+        <button class="bg-gray-700 px-4 py-2 text-white" type="submit">
           Add review
         </button>
       </Form>

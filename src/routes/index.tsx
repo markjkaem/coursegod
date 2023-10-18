@@ -16,7 +16,7 @@ export const useReviews = routeLoader$(async ({ cacheControl }) => {
     // Always serve a cached response by default, up to a week stale
     staleWhileRevalidate: 60 * 60 * 24 * 7,
     // Max once every 5 seconds, revalidate on the server to get a fresh version of this page
-    maxAge: 10000,
+    maxAge: 5,
   });
   const Allreviews = await db.select().from(reviews);
 
