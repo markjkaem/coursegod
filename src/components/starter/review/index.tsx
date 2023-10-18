@@ -12,7 +12,6 @@ interface Review {
 }
 
 export default component$(({ reviews }: any) => {
-  console.log(reviews);
   return (
     <section class="p-4 text-neutral-700 dark:text-neutral-300">
       <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl">
@@ -24,7 +23,7 @@ export default component$(({ reviews }: any) => {
         </p>
       </div>
 
-      <div class="grid gap-6 text-center md:grid-cols-3">
+      <div class="grid gap-10 text-center md:grid-cols-3 md:gap-6">
         {reviews.map((review: Review) => {
           return (
             <div key={review.id}>

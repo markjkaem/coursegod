@@ -33,7 +33,6 @@ export const onRequest: RequestHandler = async ({
     customer: checkoutSession.customer as string,
     return_url: "http://127.0.0.1:5173/dashboard/subscriptions",
   });
-  console.log(portalSession.url);
   throw redirect(301, portalSession.url);
 };
 

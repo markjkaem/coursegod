@@ -63,7 +63,6 @@ export const onRequest: RequestHandler = async ({
     cancel_url: "http://127.0.0.1:5173/payment/unsuccesfull",
     customer: customer.id,
   });
-  console.log(session.url);
   throw redirect(303, session.url as string);
 };
 
