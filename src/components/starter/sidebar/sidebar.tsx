@@ -39,21 +39,20 @@ export default component$(({ hasAccesToCourses }: any) => {
         >
           <div class="h-full overflow-y-auto border-r border-gray-200 bg-white px-3 py-5 dark:border-gray-700 dark:bg-gray-800">
             <ul class="space-y-2">
-              <li class="relative" onClick$={() => (isOpen.value = false)}>
-                <Link
-                  href="/"
-                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900  dark:text-white "
-                >
-                  {" "}
-                  <Image
-                    layout="constrained"
-                    width={200}
-                    height={200}
-                    class="h-8 w-8"
-                    src="/MWlogo.png"
-                    alt="MW"
-                  />
-                </Link>
+              <li class="relative">
+                <div class="w-10" onClick$={() => (isOpen.value = false)}>
+                  <Link href="/" class="">
+                    {" "}
+                    <Image
+                      layout="constrained"
+                      width={200}
+                      height={200}
+                      class="h-8 w-8"
+                      src="/MWlogo.png"
+                      alt="MW"
+                    />
+                  </Link>
+                </div>
                 <span
                   class="absolute right-2 top-2 cursor-pointer hover:text-gray-400"
                   onClick$={() => (isOpen.value = false)}
