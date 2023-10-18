@@ -137,7 +137,7 @@ export default component$(({ hasAccesToCourses }: any) => {
                 >
                   <svg
                     aria-hidden="true"
-                    class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    class="h-6 w-6 flex-shrink-0 text-gray-600 transition duration-75 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
