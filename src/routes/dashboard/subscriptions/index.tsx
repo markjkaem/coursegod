@@ -80,6 +80,9 @@ export default component$(() => {
           {status === "Normal" && (
             <p class="mb-3 text-lg font-bold text-yellow-400">Normal 🛡️</p>
           )}
+          {status === "No Subscription" && (
+            <p class="mb-3 text-lg font-bold text-white">No subscription :(</p>
+          )}
         </div>
         <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
           <a href="#">
