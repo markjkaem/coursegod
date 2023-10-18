@@ -12,6 +12,7 @@ interface Review {
 }
 
 export default component$(({ reviews }: any) => {
+  console.log(reviews);
   return (
     <section class="p-4 text-neutral-700 dark:text-neutral-300">
       <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl">
@@ -26,9 +27,9 @@ export default component$(({ reviews }: any) => {
       </div>
 
       <div class="grid gap-6 text-center md:grid-cols-3">
-        {reviews.value.reviews.map((review: Review) => {
+        {reviews.map((review: Review) => {
           return (
-            <div>
+            <div key={review.id}>
               <div class="block rounded-lg shadow-lg dark:shadow-black/30">
                 <div class="h-28 overflow-hidden rounded-t-lg bg-[#ffffff]"></div>
                 <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">

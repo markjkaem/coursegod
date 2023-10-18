@@ -34,7 +34,7 @@ export default component$(() => {
       <Pricing />
       <Companies />
       <div class="container-center container-spacing-xl container">
-        <Review reviews={reviews.value} />
+        <Review reviews={reviews.value.reviews} />
       </div>
       <Faq />
     </>
