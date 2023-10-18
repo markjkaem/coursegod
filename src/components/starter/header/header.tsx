@@ -12,7 +12,7 @@ export default component$(() => {
         <div class={styles.logo}>
           <Link href="/">
             {" "}
-            <img class="h-10 w-10" src="/MWLogo.png" alt="MW" />
+            <img class="h-10 w-10" src="/MWlogo.png" alt="MW" />
           </Link>
         </div>
         <ul>
