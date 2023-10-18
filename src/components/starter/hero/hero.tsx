@@ -15,7 +15,7 @@ export default component$(() => {
         <Link href="/sign-in">
           <button class="text-black">Create account</button>
         </Link>
-        <Link href="/#services" target="_blank" class="button button-dark">
+        <Link href="/#services" class="button button-dark">
           More information
         </Link>
       </div>
