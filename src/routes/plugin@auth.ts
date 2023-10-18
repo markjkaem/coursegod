@@ -1,7 +1,7 @@
 import { serverAuth$ } from "@builder.io/qwik-auth";
 import Google from "@auth/core/providers/google";
 import Discord from "@auth/core/providers/discord";
-import Spotify from "@auth/core/providers/spotify";
+import * as Spotify from "@auth/core/providers/spotify";
 import type { Provider } from "@auth/core/providers";
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
 import db  from "../../drizzle/db"
@@ -20,7 +20,7 @@ export const { onRequest, useAuthSession, useAuthSignin, useAuthSignout } =
         clientId: env.get("DISCORD_ID")!,
         clientSecret: env.get("DISCORD_SECRET")!,
       }),
-      Spotify({
+      Spotify.default({
         clientId: env.get("SPOTIFY_ID")!,
         clientSecret: env.get("SPOTIFY_SECRET")!,
       }) ,
