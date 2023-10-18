@@ -23,7 +23,7 @@ export const { onRequest, useAuthSession, useAuthSignin, useAuthSignout } =
       TwitterProivider({
         clientId: env.get("TWITTER_ID")!,
         clientSecret: env.get("TWITTER_SECRET")!,
-  
+        version: "2.0", // opt-in to Twitter OAuth 2.0
       }),
     ] as Provider[],
   }));
