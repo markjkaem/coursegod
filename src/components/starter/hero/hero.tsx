@@ -6,22 +6,18 @@ export default component$(() => {
   return (
     <div class={["container", styles.hero]}>
       <h1 class="font-bold">
-        Trending <span class="highlight">money</span>
+        Top trending <span class="highlight">money</span>
         <br />
         making <span class="highlight">methods</span>
       </h1>
-      <p>Discover new courses, and get notified regularly</p>
+      <p>Discover the latest courses, and learn how other people make bank</p>
       <div class={styles["button-group"]}>
-        <Link href="/sign-up">
+        <Link href="/sign-in">
           <button class="text-black">Create account</button>
         </Link>
-        <a
-          href="https://qwik.builder.io/docs"
-          target="_blank"
-          class="button button-dark"
-        >
+        <Link href="/#services" target="_blank" class="button button-dark">
           More information
-        </a>
+        </Link>
       </div>
     </div>
   );

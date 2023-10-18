@@ -2,13 +2,29 @@ import { component$, Slot } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { Session } from "@auth/core/types";
 import Sidebar from "~/components/starter/sidebar/sidebar";
+import { routeLoader$ } from "@builder.io/qwik-city";
+import { currentSubscription } from "~/ultils/subscriptions";
+
+export const useSubscriptionStatus = routeLoader$(
+  async ({ sharedMap, url, redirect }) => {
+    const authSession: Session | null = sharedMap.get("session");
+    if (!authSession || new Date(authSession.expires) < new Date()) {
+      throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
+    }
+    const email = authSession.user?.email;
+    const response = await currentSubscription(email as string);
+    return response;
+  },
+);
 
 export default component$(() => {
+  const subscriptionStatus = useSubscriptionStatus();
+  const hasAccesToCourses = subscriptionStatus.value.courses ?? false;
   return (
     <div class="flex min-h-screen w-screen ">
       <div class="w-3/12">
         {" "}
-        <Sidebar />
+        <Sidebar hasAccesToCourses={hasAccesToCourses as any} />
       </div>
       <div class="w-9/12 p-6">
         <Slot />

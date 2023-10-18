@@ -10,9 +10,10 @@ export default component$(() => {
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
-          <a class="text-xl font-bold text-white" href="/" title="qwik">
-            MW
-          </a>
+          <Link href="/">
+            {" "}
+            <img class="h-10 w-10" src="/MWLogo.png" alt="MW" />
+          </Link>
         </div>
         <ul>
           {!session.value?.user?.name ? (
