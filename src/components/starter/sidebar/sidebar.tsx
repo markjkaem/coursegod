@@ -189,7 +189,7 @@ export default component$(({ hasAccesToCourses }: any) => {
               </li>
             </ul>
           </div>
-          <div class="absolute bottom-2 left-0 z-20 flex w-full items-center space-x-4 border-r border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 md:bottom-0 lg:flex">
+          <div class="absolute bottom-20 left-0 z-20 flex w-full items-center space-x-4 border-r border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 md:bottom-0 md:bottom-2 lg:flex">
             <Form action={signOut}>
               <input type="hidden" name="callbackUrl" />
               <button class="px-4 py-2 text-black">Sign Out</button>
