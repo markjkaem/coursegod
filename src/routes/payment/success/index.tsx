@@ -31,7 +31,7 @@ export const onRequest: RequestHandler = async ({
 
   const portalSession = await stripe.billingPortal.sessions.create({
     customer: checkoutSession.customer as string,
-    return_url: `${process.env.BASE_URL}dashboard/subscriptions`,
+    return_url: `https://moneymaker.vercel.app/dashboard/subscriptions`,
   });
   throw redirect(301, portalSession.url);
 };

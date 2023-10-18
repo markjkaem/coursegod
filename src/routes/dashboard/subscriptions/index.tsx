@@ -41,12 +41,12 @@ export const useSubscriptionData = routeLoader$(
 
     if (!user[0].stripe_id?.includes("cus")) {
       return {
-        url: `${process.env.BASE_URL}no-subscriptions`,
+        url: `https://moneymaker.vercel.app/no-subscriptions`,
       };
     }
     const portalSession = await stripe.billingPortal.sessions.create({
       customer: user[0].stripe_id,
-      return_url: `${process.env.BASE_URL}dashboard/subscriptions`,
+      return_url: `https://moneymaker.vercel.app/dashboard/subscriptions`,
     });
 
     return {
