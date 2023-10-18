@@ -41,12 +41,12 @@ export const useSubscriptionData = routeLoader$(
 
     if (!user[0].stripe_id?.includes("cus")) {
       return {
-        url: "http://127.0.0.1:5173/no-subscriptions",
+        url: `${process.env.BASE_URL}no-subscriptions`,
       };
     }
     const portalSession = await stripe.billingPortal.sessions.create({
       customer: user[0].stripe_id,
-      return_url: "http://127.0.0.1:5173/dashboard/subscriptions",
+      return_url: `${process.env.BASE_URL}dashboard/subscriptions`,
     });
 
     return {

@@ -31,7 +31,7 @@ export const onRequest: RequestHandler = async ({
 
   const portalSession = await stripe.billingPortal.sessions.create({
     customer: checkoutSession.customer as string,
-    return_url: "http://127.0.0.1:5173/dashboard/subscriptions",
+    return_url: `${process.env.BASE_URL}dashboard/subscriptions`,
   });
   throw redirect(301, portalSession.url);
 };

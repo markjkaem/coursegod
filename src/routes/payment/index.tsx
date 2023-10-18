@@ -59,8 +59,8 @@ export const onRequest: RequestHandler = async ({
       },
     ],
     mode: "subscription",
-    success_url: `http://127.0.0.1:5173/payment/success/?sessionid={CHECKOUT_SESSION_ID}`,
-    cancel_url: "http://127.0.0.1:5173/payment/unsuccesfull",
+    success_url: `${process.env.BASE_URL}payment/success/?sessionid={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${process.env.BASE_URL}payment/unsuccesfull`,
     customer: customer.id,
   });
   throw redirect(303, session.url as string);
