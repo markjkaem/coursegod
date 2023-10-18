@@ -1,7 +1,7 @@
 import { serverAuth$ } from "@builder.io/qwik-auth";
 import Google from "@auth/core/providers/google";
 import Discord from "@auth/core/providers/discord";
-import TwitterProivider from "@auth/core/providers/twitter";
+import Spotify from "@auth/core/providers/spotify";
 import type { Provider } from "@auth/core/providers";
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
 import db  from "../../drizzle/db"
@@ -20,10 +20,9 @@ export const { onRequest, useAuthSession, useAuthSignin, useAuthSignout } =
         clientId: env.get("DISCORD_ID")!,
         clientSecret: env.get("DISCORD_SECRET")!,
       }),
-      TwitterProivider({
-        clientId: env.get("TWITTER_ID")!,
-        clientSecret: env.get("TWITTER_SECRET")!,
-        version: "2.0", // opt-in to Twitter OAuth 2.0
-      }),
+      Spotify({
+        clientId: env.get("SPOTIFY_ID")!,
+        clientSecret: env.get("SPOTIFY_SECRET")!,
+      }) ,
     ] as Provider[],
   }));
