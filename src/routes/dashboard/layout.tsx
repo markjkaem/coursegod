@@ -26,7 +26,7 @@ export default component$(() => {
         {" "}
         <Sidebar hasAccesToCourses={hasAccesToCourses as any} />
       </div>
-      <div class="pl-1 md:ml-0 md:w-9/12">
+      <div class="pl-1 md:w-9/12 md:pl-0">
         <Slot />
       </div>
     </div>
