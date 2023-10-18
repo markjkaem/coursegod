@@ -23,7 +23,7 @@ export default component$(() => {
             />
           </Link>
         </div>
-        <ul>
+        <ul class="flex items-center">
           {!session.value?.user?.name ? (
             <>
               <li>
@@ -35,7 +35,7 @@ export default component$(() => {
           ) : (
             <>
               <li>
-                <Link href="/dashboard/overview" class="text-lg">
+                <Link href="/dashboard/overview" class="text-md">
                   Dashboard
                 </Link>
               </li>{" "}
