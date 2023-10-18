@@ -59,8 +59,8 @@ export const onRequest: RequestHandler = async ({
       },
     ],
     mode: "subscription",
-    success_url: `${process.env.BASE_URL}payment/success/?sessionid={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${process.env.BASE_URL}payment/unsuccesfull`,
+    success_url: `https://moneymaker.vercel.app/payment/success/?sessionid={CHECKOUT_SESSION_ID}`,
+    cancel_url: `https://moneymaker.vercel.app/payment/unsuccesfull`,
     customer: customer.id,
   });
   throw redirect(303, session.url as string);
