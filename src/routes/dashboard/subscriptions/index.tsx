@@ -60,6 +60,7 @@ export default component$(() => {
   const url = subscriptionData.value.url;
   const subscriptionstatus = useSubscriptionStatus();
   const status = subscriptionstatus.value.plan;
+  console.log(status);
 
   return (
     <>
@@ -70,7 +71,15 @@ export default component$(() => {
               Current subscription
             </h5>
           </a>
-          <p class="mb-3 font-normal">{status}</p>
+          {status === "Legend" && (
+            <p class="mb-3 text-lg font-bold text-yellow-400">Legend 👑</p>
+          )}
+          {status === "Premium" && (
+            <p class="mb-3 text-lg font-bold text-yellow-400">Premium ⚜️</p>
+          )}
+          {status === "Normal" && (
+            <p class="mb-3 text-lg font-bold text-yellow-400">Normal 🛡️</p>
+          )}
         </div>
         <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
           <a href="#">
