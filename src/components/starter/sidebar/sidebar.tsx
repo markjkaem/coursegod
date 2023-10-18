@@ -1,7 +1,10 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { Form, Link } from "@builder.io/qwik-city";
+import { useAuthSignout } from "~/routes/plugin@auth";
+import { Image } from "@unpic/qwik";
 
 export default component$(({ hasAccesToCourses }: any) => {
+  const signOut = useAuthSignout();
   return (
     <>
       <button
@@ -34,6 +37,22 @@ export default component$(({ hasAccesToCourses }: any) => {
       >
         <div class="h-full overflow-y-auto border-r border-gray-200 bg-white px-3 py-5 dark:border-gray-700 dark:bg-gray-800">
           <ul class="space-y-2">
+            <li>
+              <Link
+                href="/"
+                class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900  dark:text-white "
+              >
+                {" "}
+                <Image
+                  layout="constrained"
+                  width={200}
+                  height={200}
+                  class="h-8 w-8"
+                  src="/MWlogo.png"
+                  alt="MW"
+                />
+              </Link>
+            </li>
             <li>
               <Link
                 href="/dashboard/overview"
@@ -105,6 +124,23 @@ export default component$(({ hasAccesToCourses }: any) => {
           <ul class="mt-5 space-y-2 border-t border-gray-200 pt-5 dark:border-gray-700">
             <li>
               <Link
+                href="/dashboard/reviews"
+                class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                </svg>
+                <span class="ml-3">Reviews</span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/dashboard/subscriptions"
                 class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -122,21 +158,12 @@ export default component$(({ hasAccesToCourses }: any) => {
             </li>
           </ul>
         </div>
-        <div class="absolute bottom-0 left-0 z-20 hidden w-full space-x-4 border-r border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 lg:flex">
-          {/* <a
-            href="#"
-            class="inline-flex cursor-pointer justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path>
-            </svg>
-          </a> */}
+        <div class="absolute bottom-0 left-0 z-20 hidden w-full items-center space-x-4 border-r border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 lg:flex">
+          <Form action={signOut}>
+            <input type="hidden" name="callbackUrl" />
+            <button class="px-4 py-2 text-black">Sign Out</button>
+          </Form>
+
           <Link
             href="/dashboard/settings"
             data-tooltip-target="tooltip-settings"
