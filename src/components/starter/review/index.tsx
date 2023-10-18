@@ -29,7 +29,7 @@ export default component$(({ reviews }: any) => {
           return (
             <div key={review.id}>
               <div class="block rounded-lg shadow-lg dark:shadow-black/30">
-                <div class="h-28 overflow-hidden rounded-t-lg bg-[#ffffff]"></div>
+                <div class="h-28 overflow-hidden rounded-t-lg bg-[#ddf527]"></div>
                 <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
                   <Image
                     layout="constrained"
