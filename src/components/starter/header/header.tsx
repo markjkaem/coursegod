@@ -14,8 +14,8 @@ export default component$(() => {
       <div
         class={
           store.scrolled
-            ? "fixed flex w-screen items-center justify-between bg-slate-900 px-20 py-4"
-            : "fixed flex  w-screen items-center justify-between bg-transparent px-8 py-4"
+            ? "fixed flex w-screen items-center justify-between bg-slate-900 px-10 py-4 md:px-20"
+            : "fixed flex  w-screen items-center justify-between bg-transparent px-4 py-4 md:px-8"
         }
         document:onScroll$={() => {
           if (window.scrollY > 0) {
