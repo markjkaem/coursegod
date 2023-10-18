@@ -29,7 +29,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "The money whale",
+  title: "The Money Whale, get the latest money making courses.",
   meta: [
     {
       name: "description",

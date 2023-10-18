@@ -1,8 +1,66 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { Link, routeLoader$ } from "@builder.io/qwik-city";
 import Pricing from "~/components/starter/pricing/pricing";
+import Stripe from "stripe";
+import db from "../../../../drizzle/db";
+import { users } from "../../../../drizzle/schema";
+import { eq } from "drizzle-orm";
+import { Session } from "@auth/core/types";
+import { currentSubscription } from "~/ultils/subscriptions";
+
+const stripe = new Stripe(
+  "sk_test_51L34nrJ0Tu9paWkW9sF0gCPGB55l3fncgRlFJmF2Lcr4xEUdCMuUtQnYang1GsxdZAmw9AaTC6vHgJHPhNMAsDDA000WqYNd73",
+  {
+    apiVersion: "2023-10-16",
+  },
+);
+export const useSubscriptionStatus = routeLoader$(
+  async ({ sharedMap, url, redirect }) => {
+    const authSession: Session | null = sharedMap.get("session");
+    if (!authSession || new Date(authSession.expires) < new Date()) {
+      throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
+    }
+    const email = authSession.user?.email;
+    const response = await currentSubscription(email as string);
+    return response;
+  },
+);
+
+export const useSubscriptionData = routeLoader$(
+  async ({ sharedMap, redirect, url }) => {
+    const authSession: Session | null = sharedMap.get("session");
+    if (!authSession || new Date(authSession.expires) < new Date()) {
+      throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
+    }
+    const email = authSession.user?.email;
+
+    const user = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, email as string));
+
+    if (!user[0].stripe_id?.includes("cus")) {
+      return {
+        url: "http://127.0.0.1:5173/no-subscriptions",
+      };
+    }
+    const portalSession = await stripe.billingPortal.sessions.create({
+      customer: user[0].stripe_id,
+      return_url: "http://127.0.0.1:5173/dashboard/subscriptions",
+    });
+
+    return {
+      url: portalSession.url,
+    };
+  },
+);
 
 export default component$(() => {
+  const subscriptionData = useSubscriptionData();
+  const url = subscriptionData.value.url;
+  const subscriptionstatus = useSubscriptionStatus();
+  const status = subscriptionstatus.value.plan;
+
   return (
     <>
       <div class="grid grid-cols-1 justify-center gap-10 p-4 md:grid-cols-3 ">
@@ -12,18 +70,18 @@ export default component$(() => {
               Current subscription
             </h5>
           </a>
-          <p class="mb-3 font-normal">Unsubscribed</p>
+          <p class="mb-3 font-normal">{status}</p>
         </div>
         <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
           <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Upgrade
+              Manage
             </h5>
           </a>
-          <p class="mb-3 font-normal">Upgrade your subscription</p>
-          <Link href="/dashboard/subscriptions#pricing">
+          <p class="mb-3 font-normal">Manage your subscription(s)</p>
+          <Link href={url}>
             <button class="flex items-center px-4 py-2 text-black">
-              Upgrade subscription
+              Manage subscription(s)
             </button>
           </Link>
         </div>
@@ -33,10 +91,10 @@ export default component$(() => {
               Cancel
             </h5>
           </a>
-          <p class="mb-3 font-normal">Cancel your subscription</p>
-          <Link href="/dashboard/forum">
-            <button class="flex items-center px-4 py-2 text-black">
-              Cancel subscription
+          <p class="mb-3 font-normal">Cancel your subscription(s)</p>
+          <Link href={url}>
+            <button class="flex items-center bg-red-400 px-4 py-2 text-black">
+              Cancel subscription(s)
             </button>
           </Link>
         </div>
