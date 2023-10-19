@@ -25,6 +25,7 @@ export default component$(() => {
         <ServiceWorkerRegister />
       </head>
       <body lang="en">
+        {/*  <!-- Start of HubSpot Embed Code --> */}
         <script
           type="text/javascript"
           id="hs-script-loader"
