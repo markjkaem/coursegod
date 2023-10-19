@@ -13,8 +13,9 @@
   "routes": [
     {
       "src": "/dashboard/courses/[title]/index.tsx",
-      "dest": "/src/routes/dashboard/courses/[title]/index.tsx",
-      "ssr": false
+      "handle": "filesystem",
+      "dest": "/src/routes/dashboard/courses/[title]/index.tsx"
+     
     }
   ]
 }
