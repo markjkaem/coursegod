@@ -9,13 +9,5 @@
         }
       ]
     }
-  ],
-  "routes": [
-    {
-      "src": "/dashboard/courses/[title]/index.tsx",
-      "handle": "filesystem",
-      "dest": "/src/routes/dashboard/courses/[title]/index.tsx"
-     
-    }
   ]
 }
