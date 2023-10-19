@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -113,12 +114,18 @@ export default component$(() => {
                 </p>
                 <p>
                   Find out more information by{" "}
-                  <a
-                    href="#"
+                  <Link
+                    href="/terms"
                     class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
                   >
-                    reading the license
-                  </a>
+                    reading the terms
+                  </Link>{" "}
+                  <Link
+                    href="/privacy-policy"
+                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
+                  >
+                    privacy policy
+                  </Link>
                   .
                 </p>
               </div>
