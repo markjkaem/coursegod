@@ -13,7 +13,10 @@ export const useErrorLoader = routeLoader$(async ({ query }) => {
         "There was an error signing in, you can't use different login providers.",
     };
   } else {
-    return { errorMessage: "There was an unknown error signing in." };
+    return {
+      errorMessage:
+        "There was an error signing in, you can't use different login providers.",
+    };
   }
 });
 
