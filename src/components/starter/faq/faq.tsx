@@ -24,13 +24,12 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What do you mean by "Figma assets"?
+                  1. What are the available subscription options on your
+                  platform?
                 </h3>
                 <p class="">
-                  You will have access to download the full Figma project
-                  including all of the pages, the components, responsive pages,
-                  and also the icons, illustrations, and images included in the
-                  screens.
+                  We offer four subscription options: Unsubscribed, Normal,
+                  Premium, and Legend.
                 </p>
               </div>
               <div class="mb-10">
@@ -47,12 +46,12 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does "lifetime access" exactly mean?
+                  2. What does the Normal subscription include?
                 </h3>
                 <p>
-                  Once you have purchased either the design, code, or both
-                  packages, you will have access to all of the future updates
-                  based on the roadmap, free of charge.
+                  The Normal subscription, priced at $29 per month, provides
+                  access to all our courses and our forum. You'll enjoy
+                  exclusive status icons and 1-on-1 support from our Legends.
                 </p>
               </div>
               <div class="mb-10">
@@ -69,12 +68,13 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  How does support work?
+                  What is the cost of the Premium subscription, and what does it
+                  offer?
                 </h3>
                 <p>
-                  We're aware of the importance of well qualified support, that
-                  is why we decided that support will only be provided by the
-                  authors that actually worked on this project.
+                  The Premium subscription is available for $39 per month and
+                  grants you access to all our courses, exclusive premium status
+                  icons, and 1-on-1 support from our Legends.
                 </p>
                 <p>
                   Feel free to{" "}
@@ -103,14 +103,13 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  I want to build more than one project. Is that allowed?
+                  What benefits does the Legend subscription offer, and how much
+                  does it cost?
                 </h3>
                 <p>
-                  You can use Windster for an unlimited amount of projects,
-                  whether it's a personal website, a SaaS app, or a website for
-                  a client. As long as you don't build a product that will
-                  directly compete with Windster either as a UI kit, theme, or
-                  template, it's fine.
+                  The Legend subscription, priced at $149 per month, provides
+                  access to all our courses, exclusive Legend status icons, and
+                  1-on-1 support from our Legends.
                 </p>
                 <p>
                   Find out more information by{" "}
@@ -139,19 +138,11 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does "free updates" include?
+                  Can I switch between subscription levels?
                 </h3>
                 <p>
-                  The free updates that will be provided is based on the{" "}
-                  <a
-                    href="#"
-                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
-                  >
-                    roadmap
-                  </a>{" "}
-                  that we have laid out for this project. It is also possible
-                  that we will provide extra updates outside of the roadmap as
-                  well.
+                  Yes, you can upgrade or downgrade your subscription at any
+                  time to meet your changing needs.
                 </p>
               </div>
               <div class="mb-10">
@@ -168,23 +159,11 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does the free version include?
+                  What happens if I cancel my subscription?
                 </h3>
                 <p>
-                  The{" "}
-                  <a
-                    href="#"
-                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
-                  >
-                    free version
-                  </a>{" "}
-                  of Windster includes a minimal style guidelines, component
-                  variants, and a dashboard page with the mobile version
-                  alongside it.
-                </p>
-                <p>
-                  You can use this version for any purposes, because it is
-                  open-source under the MIT license.
+                  If you cancel your subscription, you will lose access to our
+                  courses and forum. However, you can resubscribe at any time.
                 </p>
               </div>
               <div class="mb-10">
@@ -201,18 +180,13 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What is the difference between Windster and Tailwind UI?
+                  Are the courses downloadable, and do you add new ones
+                  regularly?
                 </h3>
                 <p>
-                  Although both Windster and Tailwind UI are built for
-                  integration with Tailwind CSS, the main difference is in the
-                  design, the pages, the extra components and UI elements that
-                  Windster includes.
-                </p>
-                <p>
-                  Additionally, Windster is a project that is still in
-                  development, and later it will include both the application,
-                  marketing, and e-commerce UI interfaces.
+                  Yes, all our courses are downloadable, and we continually add
+                  new ones every month, providing fresh content for our
+                  subscribers.
                 </p>
               </div>
               <div class="mb-10">
@@ -229,27 +203,13 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  Can I use Windster in open-source projects?
+                  Is there a setup fee or any hidden charges associated with the
+                  subscriptions?
                 </h3>
                 <p>
-                  Generally, it is accepted to use Windster in open-source
-                  projects, as long as it is not a UI library, a theme, a
-                  template, a page-builder that would be considered as an
-                  alternative to Windster itself.
-                </p>
-                <p>
-                  With that being said, feel free to use this design kit for
-                  your open-source projects.
-                </p>
-                <p>
-                  Find out more information by{" "}
-                  <a
-                    href="#"
-                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
-                  >
-                    reading the license
-                  </a>
-                  .
+                  No, there are no setup fees or hidden charges associated with
+                  any of our subscription levels. The price you see is the price
+                  you pay per month for the selected subscription.
                 </p>
               </div>
             </div>
