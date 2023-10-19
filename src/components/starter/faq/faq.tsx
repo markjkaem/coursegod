@@ -4,7 +4,7 @@ import { Link } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <div>
-      <section class="mt-20">
+      <section id="faq" class="mt-20">
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
           <h2 class="mb-8 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             Frequently asked questions
@@ -115,12 +115,14 @@ export default component$(() => {
                 <p>
                   Find out more information by{" "}
                   <Link
+                    target="_blank"
                     href="/terms"
                     class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
                   >
                     reading the terms
                   </Link>{" "}
                   <Link
+                    target="_blank"
                     href="/privacy-policy"
                     class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
                   >
