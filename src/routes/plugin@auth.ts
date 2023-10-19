@@ -11,6 +11,9 @@ export const { onRequest, useAuthSession, useAuthSignin, useAuthSignout } =
     secret: env.get("AUTH_SECRET"),
     trustHost: true,
     adapter: DrizzleAdapter(db),
+    pages: {
+      error: "/sign-in/error"
+    },
     providers: [
       Google({
         clientId: env.get("GOOGLE_ID")!,
