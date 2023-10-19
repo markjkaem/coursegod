@@ -19,6 +19,7 @@ export const onRequest: RequestHandler = async ({
   sharedMap,
   query,
   url,
+  env,
 }) => {
   const authSession: Session | null = sharedMap.get("session");
   const lookupKey = query.get("id");
@@ -59,8 +60,10 @@ export const onRequest: RequestHandler = async ({
       },
     ],
     mode: "subscription",
-    success_url: `https://moneymaker.vercel.app/payment/success/?sessionid={CHECKOUT_SESSION_ID}`,
-    cancel_url: `https://moneymaker.vercel.app/payment/unsuccesfull`,
+    success_url: `${env.get(
+      "BASE_URL",
+    )!}payment/success/?sessionid={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${env.get("BASE_URL")!}payment/unsuccesfull`,
     customer: customer.id,
   });
   throw redirect(303, session.url as string);

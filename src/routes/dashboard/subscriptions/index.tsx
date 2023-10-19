@@ -27,7 +27,7 @@ export const useSubscriptionStatus = routeLoader$(
 );
 
 export const useSubscriptionData = routeLoader$(
-  async ({ sharedMap, redirect, url }) => {
+  async ({ sharedMap, redirect, url, env }) => {
     const authSession: Session | null = sharedMap.get("session");
     if (!authSession || new Date(authSession.expires) < new Date()) {
       throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
@@ -41,12 +41,12 @@ export const useSubscriptionData = routeLoader$(
 
     if (!user[0].stripe_id?.includes("cus")) {
       return {
-        url: `https://moneymaker.vercel.app/no-subscriptions`,
+        url: `${env.get("BASE_URL")!}no-subscriptions`,
       };
     }
     const portalSession = await stripe.billingPortal.sessions.create({
       customer: user[0].stripe_id,
-      return_url: `https://moneymaker.vercel.app/dashboard/subscriptions`,
+      return_url: `${env.get("BASE_URL")!}dashboard/subscriptions`,
     });
 
     return {
@@ -65,9 +65,9 @@ export default component$(() => {
   return (
     <>
       <div class="grid grid-cols-1 justify-center gap-10 p-4 md:grid-cols-3 ">
-        <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
+        <div class="max-w-sm rounded-lg border border-gray-200  bg-slate-900 p-6 shadow ">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Current subscription
             </h5>
           </a>
@@ -84,26 +84,26 @@ export default component$(() => {
             <p class="mb-3 text-lg font-bold text-white">No subscription :(</p>
           )}
         </div>
-        <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
+        <div class="max-w-sm rounded-lg border border-gray-200 bg-slate-900 p-6 shadow">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white ">
               Manage
             </h5>
           </a>
-          <p class="mb-3 font-normal">Manage your subscription(s)</p>
+          <p class="mb-3 font-normal text-white">Manage your subscription(s)</p>
           <Link href={url}>
             <button class="flex items-center px-4 py-2 text-black">
               Manage subscription(s)
             </button>
           </Link>
         </div>
-        <div class="max-w-sm rounded-lg border border-gray-200  p-6 shadow">
+        <div class="max-w-sm rounded-lg border border-gray-200 bg-slate-900   p-6 shadow">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Cancel
             </h5>
           </a>
-          <p class="mb-3 font-normal">Cancel your subscription(s)</p>
+          <p class="mb-3 font-normal text-white">Cancel your subscription(s)</p>
           <Link href={url}>
             <button class="flex items-center bg-red-400 px-4 py-2 text-black">
               Cancel subscription(s)
