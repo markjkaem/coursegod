@@ -15,7 +15,7 @@ export default component$(() => {
                   Sign in to your account
                 </span>
               </div>
-              <div class="grid-grid-cols-1 grid gap-0 md:grid-cols-2 md:gap-4">
+              <div class="grid-grid-cols-1 grid gap-0 gap-2 md:grid-cols-2 md:gap-4">
                 <Form action={signIn}>
                   <input type="hidden" name="providerId" value="google" />
                   <input
