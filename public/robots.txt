@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /payment
+Disallow: /payment/success
+Disallow: /payment/unsuccesfull
+Disallow: /dashboard/courses
+Disallow: /dashboard/overview
+Disallow: /dashboard/reviews
+Disallow: /dashboard/subscriptions
+Disallow: /dashboard/settings
+
+Sitemap: https://www.moneymaker.vercel.app/sitemap.xml
