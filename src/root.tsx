@@ -25,6 +25,13 @@ export default component$(() => {
         <ServiceWorkerRegister />
       </head>
       <body lang="en">
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js-eu1.hs-scripts.com/143496025.js"
+        ></script>
         <RouterOutlet />
       </body>
     </QwikCityProvider>
