@@ -24,18 +24,18 @@ export const onRequest: RequestHandler = async ({
 export default component$(() => {
   return (
     <>
-      <div class="grid grid-cols-1 justify-center gap-10 p-4 md:grid-cols-3 ">
+      <div class="grid grid-cols-1 justify-center gap-4 p-6 lg:grid-cols-2 xl:grid-cols-3 ">
         {courses.map((course) => {
           return (
             <div
               key={course.id}
-              class="max-w-sm rounded-lg border border-gray-200 bg-slate-900  p-6 shadow"
+              class="w-80 rounded-lg border border-gray-200 bg-slate-900  p-6 shadow"
             >
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <span class="mb-2 text-2xl font-bold tracking-tight text-white ">
                 {course.title}
-              </h5>
+              </span>
 
-              <p class="mb-3 font-normal">{course.title}</p>
+              <p class="mb-3 font-normal text-white">{course.title}</p>
               <Link href={`/dashboard/courses/${course.title}`}>
                 <button class="flex items-center px-4 py-2 text-black">
                   Download
