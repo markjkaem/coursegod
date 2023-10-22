@@ -8,14 +8,14 @@ export default component$(() => {
     <>
       <section class="">
         <div class="mx-auto flex flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0">
-          <div class="w-full rounded-lg shadow dark:border dark:border-gray-500  sm:max-w-md md:mt-0 xl:p-0">
+          <div class="w-full rounded-lg bg-slate-900 shadow  sm:max-w-md md:mt-0 xl:p-0">
             <div class="flex flex-col items-center justify-center space-y-4 p-6 sm:p-8 md:space-y-6">
               <div class="flex flex-col">
-                <span class="text-xl font-bold leading-tight tracking-tight text-gray-900 text-white md:text-2xl">
+                <span class="text-xl font-bold leading-tight tracking-tight  text-white md:text-2xl">
                   Sign in to your account
                 </span>
               </div>
-              <div class="grid-grid-cols-1 grid gap-0 gap-2 md:grid-cols-2 md:gap-4">
+              <div class="grid-grid-cols-1 grid  gap-2 md:grid-cols-2 md:gap-4">
                 <Form action={signIn}>
                   <input type="hidden" name="providerId" value="google" />
                   <input

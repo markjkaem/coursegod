@@ -77,18 +77,6 @@ export default component$(() => {
                   grants you access to all our courses, exclusive premium status
                   icons, and 1-on-1 support from our Legends.
                 </p>
-                <p>
-                  Feel free to{" "}
-                  <a
-                    href="#"
-                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    contact us
-                  </a>{" "}
-                  and we'll help you out as soon as we can.
-                </p>
               </div>
               <div class="mb-10">
                 <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
