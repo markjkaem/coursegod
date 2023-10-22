@@ -5,11 +5,11 @@ import { Link } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <div class={["container", styles.hero]}>
-      <h1 class="font-bold">
-        Top trending <span class="highlight">money</span>
+      <span class="-z-10 text-5xl font-extrabold leading-tight tracking-tight text-white drop-shadow-lg md:text-7xl">
+        Top Trending <span class="highlight">Money</span>
         <br />
-        making <span class="highlight">methods</span>
-      </h1>
+        Making <span class="highlight">Methods</span>
+      </span>
       <p>Discover the latest courses, and learn how other people make bank</p>
       <div class={styles["button-group"]}>
         <Link href="/sign-in">
