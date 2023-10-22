@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { RequestHandler } from "@builder.io/qwik-city";
-import fs from "node:fs";
-import { list, put } from "@vercel/blob";
+import { list } from "@vercel/blob";
 
 export const onGet: RequestHandler = async ({ headers, send, params }) => {
   headers.set("Content-Type", "application/x-rar-compressed");
