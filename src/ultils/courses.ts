@@ -1,5 +1,3 @@
-import { V } from "drizzle-orm/column.d-aa4e525d";
-
 export const courses = [{
     id: 1,
     title: 'course1'
