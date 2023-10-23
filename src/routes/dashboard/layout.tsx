@@ -1,5 +1,5 @@
 import { component$, Slot } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import type { DocumentHead, RequestHandler } from "@builder.io/qwik-city";
 import { Session } from "@auth/core/types";
 import Sidebar from "~/components/starter/sidebar/sidebar";
 import { routeLoader$ } from "@builder.io/qwik-city";
@@ -16,6 +16,16 @@ export const useSubscriptionStatus = routeLoader$(
     return response;
   },
 );
+
+export const head: DocumentHead = {
+  title: "The Money Whale, Dashboard.",
+  meta: [
+    {
+      name: "description",
+      content: "Make money like a whale, welcome to the dashboard.",
+    },
+  ],
+};
 
 export default component$(() => {
   const subscriptionStatus = useSubscriptionStatus();
