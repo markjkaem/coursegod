@@ -3,8 +3,8 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
-    <div class="container-purple container-center container">
-      <h2 class="font-bold text-black">
+    <div id="pricing" class="container-purple container-center container">
+      <h2 class="mt-6 font-bold text-black">
         Sign Up now,
         <br />
         <span class="text-2xl font-normal">and become a whale today.</span>

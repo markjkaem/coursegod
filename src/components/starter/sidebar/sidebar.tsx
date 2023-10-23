@@ -187,6 +187,42 @@ export default component$(({ hasAccesToCourses }: any) => {
                   </div>
                 </li>
               )}
+              <li onClick$={() => (isOpen.value = false)}>
+                <Link
+                  href="/blogs"
+                  target="_blank"
+                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                  </svg>
+                  <span class="ml-3">Stories</span>
+                </Link>
+              </li>
+              <li onClick$={() => (isOpen.value = false)}>
+                <Link
+                  href="/#faq"
+                  target="_blank"
+                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                  </svg>
+                  <span class="ml-3">FAQ</span>
+                </Link>
+              </li>
             </ul>
           </div>
           <div class="absolute bottom-20 left-0 z-20 flex w-full items-center space-x-4 border-r border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-slate-900 md:bottom-0 md:bottom-2 lg:flex">

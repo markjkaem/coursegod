@@ -71,3 +71,20 @@ export const reviews = pgTable("reviews",
   image: text("image"),
   name: text("name")
 })
+
+export const blogs = pgTable("blogs",
+{
+  id: serial("id").primaryKey().unique(),
+  title: text("title"),
+  intro: text("intro"),
+  text1: text("text1"),
+  text2: text("text2"),
+  text3: text("text3"),
+  text4: text("text4"),
+  text5: text("text5"),
+  text6: text("text6"),
+  text7: text("text7"),
+  image: text("image"),
+  author: text("author"),
+  date: text("date")
+})
