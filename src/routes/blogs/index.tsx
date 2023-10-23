@@ -30,7 +30,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
 export default component$(() => {
   const blogs = useBlogs();
   return (
-    <div class="grid min-h-screen grid-cols-1 text-white lg:flex">
+    <div class="grid min-h-screen grid-cols-1 gap-2 text-white lg:flex">
       <div class="w-full justify-center p-2 lg:w-4/6 lg:p-4">
         <div>
           <div class="m-auto w-full lg:w-8/12">
