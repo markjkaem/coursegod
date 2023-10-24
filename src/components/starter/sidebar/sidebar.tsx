@@ -48,7 +48,7 @@ export default component$(({ hasAccesToCourses }: any) => {
                       width={200}
                       height={200}
                       class="h-8 w-8"
-                      src="/MWlogo.png"
+                      src="/cg.png"
                       alt="MW"
                     />
                   </Link>
