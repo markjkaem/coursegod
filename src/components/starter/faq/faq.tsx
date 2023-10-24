@@ -6,13 +6,13 @@ export default component$(() => {
     <div>
       <section id="faq" class="mt-20">
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
-          <h2 class="mb-8 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h2 class="mb-8 text-4xl font-extrabold tracking-tight text-white">
             Frequently asked questions
           </h2>
-          <div class="grid border-t border-gray-200 pt-8 text-left dark:border-gray-700 md:grid-cols-2 md:gap-16">
+          <div class="grid border-t border-gray-700 pt-8 text-left md:grid-cols-2 md:gap-16">
             <div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -34,7 +34,7 @@ export default component$(() => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -56,7 +56,7 @@ export default component$(() => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -79,7 +79,7 @@ export default component$(() => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -105,14 +105,14 @@ export default component$(() => {
                   <Link
                     target="_blank"
                     href="/terms"
-                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
+                    class="text-primary-500 font-medium underline hover:no-underline"
                   >
                     reading the terms
                   </Link>{" "}
                   <Link
                     target="_blank"
                     href="/privacy-policy"
-                    class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline"
+                    class="text-primary-500 font-medium underline hover:no-underline"
                   >
                     privacy policy
                   </Link>
@@ -122,7 +122,7 @@ export default component$(() => {
             </div>
             <div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -143,7 +143,7 @@ export default component$(() => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -164,7 +164,7 @@ export default component$(() => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"
@@ -187,7 +187,7 @@ export default component$(() => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="mb-4 flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="mb-4 flex items-center text-lg font-medium text-white">
                   <svg
                     class="mr-2 h-5 w-5 flex-shrink-0 "
                     fill="currentColor"

@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { useAuthSignin } from "../plugin@auth";
-import { Form } from "@builder.io/qwik-city";
+import { DocumentHead, Form } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const signIn = useAuthSignin();
@@ -23,7 +23,7 @@ export default component$(() => {
                     name="options.callbackUrl"
                     value="/dashboard/overview"
                   />
-                  <button class="dark:focus:ring-[#4285F4]/55 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-[#4285F4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50">
+                  <button class="focus:ring-[#4285F4]/55 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-[#4285F4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50">
                     <svg
                       class="mr-2 h-4 w-4"
                       aria-hidden="true"
@@ -47,7 +47,7 @@ export default component$(() => {
                     name="options.callbackUrl"
                     value="/dashboard/overview"
                   />
-                  <button class="dark:focus:ring-[#7289da]/55 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-[#7289da] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#7289da]/90 focus:outline-none focus:ring-4 focus:ring-[#7289da]/50">
+                  <button class="focus:ring-[#7289da]/55 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-[#7289da] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#7289da]/90 focus:outline-none focus:ring-4 focus:ring-[#7289da]/50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -68,7 +68,7 @@ export default component$(() => {
                     name="options.callbackUrl"
                     value="/dashboard/overview"
                   />
-                  <button class="dark:focus:ring-[#7289da]/55 mb-2 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-black">
+                  <button class="focus:ring-[#7289da]/55 mb-2 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-black">
                     <svg
                       class="mr-2 h-4 w-4"
                       xmlns="http://www.w3.org/2000/svg"
@@ -91,3 +91,13 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Course God, Sign In",
+  meta: [
+    {
+      name: "description",
+      content: "Sign in page",
+    },
+  ],
+};

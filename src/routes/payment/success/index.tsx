@@ -1,7 +1,7 @@
 // import { Session } from "@auth/core/types";
 import { Session } from "@auth/core/types";
 import { component$ } from "@builder.io/qwik";
-import { RequestHandler } from "@builder.io/qwik-city";
+import { DocumentHead, RequestHandler } from "@builder.io/qwik-city";
 import Stripe from "stripe";
 
 const stripe = new Stripe(
@@ -46,3 +46,13 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Course God, Succes",
+  meta: [
+    {
+      name: "description",
+      content: "Order was succesfull",
+    },
+  ],
+};
