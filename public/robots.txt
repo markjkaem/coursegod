@@ -8,4 +8,4 @@ Disallow: /dashboard/reviews
 Disallow: /dashboard/subscriptions
 Disallow: /dashboard/settings
 
-Sitemap: https://www.moneymaker.vercel.app/sitemap.xml
+Sitemap: https://coursegod.com/sitemap.xml
