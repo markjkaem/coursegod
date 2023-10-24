@@ -20,6 +20,9 @@ export default component$(() => {
             <Link href="/#faq" class="text-white" target="_blank">
               FAQ
             </Link>
+            <Link href="/blogs" class="text-white" target="_blank">
+              Blogs
+            </Link>
           </div>
           <span>Made with ♡ by Builder.io</span>
           <span class={styles.spacer}>|</span>

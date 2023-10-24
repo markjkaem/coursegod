@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 export default component$(() => {
   return (
     <div class=" container-purple container-center container">
-      <h2 class="font-bold text-black">
+      <h2 class="text-3xl font-bold text-black">
         This was created by
         <br />
         <span class="text-2xl font-normal">
