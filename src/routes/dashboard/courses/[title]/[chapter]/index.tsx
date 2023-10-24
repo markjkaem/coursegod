@@ -26,39 +26,33 @@ export const useLink = routeLoader$(async ({ params }) => {
   const correctCourse = courses.filter(
     (course) => course.title === params.title,
   );
-  const course = correctCourse[0];
+  console.log(params);
+  const course = correctCourse[0].chapters?.filter(
+    (chapter) => chapter.id === Number(params.chapter),
+  )!;
+  console.log(course);
+  const chapter = course[0];
 
   return {
-    link: course.link,
-    title: course.title,
-    banner: course.banner,
-    description: course.description,
-    chapters: course.chapters,
+    title: chapter.title,
+    source: chapter.source,
   };
 });
 
 export default component$(() => {
-  const course = useLink();
-
+  const chapter = useLink();
+  console.log(chapter.value.source);
   return (
     <div>
       {" "}
-      <h1 class="text-3xl text-white">{course.value.title}</h1>
-      <div class="mt-10 flex flex-col">
-        {course.value.chapters?.map((chapter) => {
-          return (
-            <Link
-              class="w-3/6 bg-slate-800 px-4 py-2 hover:bg-slate-700"
-              href={`/dashboard/courses/${course.value.title}/${chapter.id}`}
-            >
-              {chapter.title}
-            </Link>
-          );
-        })}
+      <div>
+        <h1 class="text-2xl font-bold text-white">{chapter.value.title}</h1>
+        <iframe
+          width="640"
+          height="360"
+          src={`https://www.dailymotion.com/embed/video/${chapter.value.source}`}
+        ></iframe>
       </div>
-      {/* <a target="_blank" href={`${course.value.link}`}>
-        <button class="flex items-center px-4 py-2 text-black">Download</button>
-      </a> */}
     </div>
   );
 });
