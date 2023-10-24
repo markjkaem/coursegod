@@ -128,7 +128,7 @@ export default component$(() => {
             />
             <ServiceCard
               title="Coming soon"
-              details="Got a new idea for the platform? Email us, and we might add it to our list at info@themoneywhale.org."
+              details="Got a new idea for the platform? Email us, and we might add it to our list at info@coursegod.com."
               icon={
                 <svg
                   width="35"
@@ -146,7 +146,7 @@ export default component$(() => {
             />
             <ServiceCard
               title="Coming soon"
-              details="Got a new idea for the platform? Email us, and we might add it to our list at info@themoneywhale.org."
+              details="Got a new idea for the platform? Email us, and we might add it to our list at info@coursegod.org."
               icon={
                 <svg
                   width="35"

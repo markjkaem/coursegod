@@ -25,7 +25,7 @@ export const useBlogs = routeLoader$(async ({ params }) => {
 export const head: DocumentHead = ({ resolveValue }) => {
   const headBlog = resolveValue(useBlogs);
   return {
-    title: `The Money Whale, ${headBlog.blog.title}`,
+    title: `Course God, ${headBlog.blog.title}`,
     meta: [
       {
         name: "description",

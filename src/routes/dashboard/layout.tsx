@@ -18,7 +18,7 @@ export const useSubscriptionStatus = routeLoader$(
 );
 
 export const head: DocumentHead = {
-  title: "The Money Whale, Dashboard.",
+  title: "Course God, Dashboard.",
   meta: [
     {
       name: "description",
