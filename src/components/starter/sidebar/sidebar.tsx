@@ -14,7 +14,7 @@ export default component$(({ hasAccesToCourses }: any) => {
         data-drawer-toggle="default-sidebar"
         aria-controls="default-sidebar"
         type="button"
-        class="ml-3 mt-2 inline-flex items-center rounded-lg  p-2 text-sm text-gray-500  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  dark:focus:ring-gray-600"
+        class="ml-3 mt-2 inline-flex items-center rounded-lg  p-2 text-sm  text-gray-400 focus:outline-none  focus:ring-2  focus:ring-gray-600"
       >
         <span class="mr-4 hidden md:flex "></span>
         <svg
@@ -37,7 +37,7 @@ export default component$(({ hasAccesToCourses }: any) => {
           class="fixed left-0 top-0 z-40 h-screen w-64 transition-transform sm:translate-x-0"
           aria-label="Sidenav"
         >
-          <div class="h-full overflow-y-auto border-r border-gray-200 bg-white px-3 py-5 dark:border-slate-700 dark:bg-slate-900">
+          <div class="h-full overflow-y-auto border-r  border-slate-700 bg-slate-900 px-3 py-5">
             <ul class="space-y-2">
               <li class="relative">
                 <div class="w-10" onClick$={() => (isOpen.value = false)}>
@@ -64,11 +64,11 @@ export default component$(({ hasAccesToCourses }: any) => {
               <li class="pt-4" onClick$={() => (isOpen.value = false)}>
                 <Link
                   href="/dashboard/overview"
-                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  class="group flex items-center rounded-lg p-2 text-base font-normal  text-white hover:bg-gray-700"
                 >
                   <svg
                     aria-hidden="true"
-                    class="h-6 w-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    class="h-6 w-6  text-gray-400 transition  duration-75 group-hover:text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -84,11 +84,11 @@ export default component$(({ hasAccesToCourses }: any) => {
                 <li onClick$={() => (isOpen.value = false)}>
                   <Link
                     href="/dashboard/courses"
-                    class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    class="group flex items-center rounded-lg p-2 text-base font-normal  text-white hover:bg-gray-700"
                   >
                     <svg
                       aria-hidden="true"
-                      class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                      class="h-6 w-6 flex-shrink-0  text-gray-400 transition  duration-75 group-hover:text-white"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -129,15 +129,15 @@ export default component$(({ hasAccesToCourses }: any) => {
                 </li>
               )}
             </ul>
-            <ul class="mt-5 space-y-2 border-t border-gray-200 pt-5 dark:border-gray-700">
+            <ul class="mt-5 space-y-2 border-t  border-gray-700 pt-5">
               <li onClick$={() => (isOpen.value = false)}>
                 <Link
                   href="/dashboard/subscriptions"
-                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  class="group flex items-center rounded-lg p-2 text-base font-normal  text-white transition  duration-75 hover:bg-gray-700"
                 >
                   <svg
                     aria-hidden="true"
-                    class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    class="h-6 w-6 flex-shrink-0  text-gray-400 transition  duration-75 group-hover:text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -151,11 +151,11 @@ export default component$(({ hasAccesToCourses }: any) => {
                 <li onClick$={() => (isOpen.value = false)}>
                   <Link
                     href="/dashboard/reviews"
-                    class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    class="group flex items-center rounded-lg p-2 text-base font-normal  text-white transition  duration-75 hover:bg-gray-700"
                   >
                     <svg
                       aria-hidden="true"
-                      class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                      class="h-6 w-6 flex-shrink-0 text-gray-400 transition  duration-75 group-hover:text-white"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -191,11 +191,11 @@ export default component$(({ hasAccesToCourses }: any) => {
                 <Link
                   href="/blogs"
                   target="_blank"
-                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  class="group flex items-center rounded-lg p-2 text-base font-normal  text-white transition  duration-75 hover:bg-gray-700"
                 >
                   <svg
                     aria-hidden="true"
-                    class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    class="h-6 w-6 flex-shrink-0  text-gray-400 transition  duration-75 group-hover:text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -209,11 +209,11 @@ export default component$(({ hasAccesToCourses }: any) => {
                 <Link
                   href="/#faq"
                   target="_blank"
-                  class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  class="group flex items-center rounded-lg p-2 text-base font-normal  text-white transition  duration-75 hover:bg-gray-700"
                 >
                   <svg
                     aria-hidden="true"
-                    class="h-6 w-6 flex-shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    class="h-6 w-6 flex-shrink-0  text-gray-400 transition  duration-75 group-hover:text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@ export default component$(({ hasAccesToCourses }: any) => {
               </li>
             </ul>
           </div>
-          <div class="absolute bottom-20 left-0 z-20 flex w-full items-center space-x-4 border-r border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-slate-900 md:bottom-0 md:bottom-2 lg:flex">
+          <div class="absolute bottom-20 left-0 z-20 flex w-full items-center space-x-4 border-r  border-gray-700  bg-slate-900 p-4 md:bottom-0 md:bottom-2 lg:flex">
             <Form action={signOut}>
               <input type="hidden" name="callbackUrl" />
               <button class="px-4 py-2 text-black">Sign Out</button>
@@ -234,7 +234,7 @@ export default component$(({ hasAccesToCourses }: any) => {
               <Link
                 href="/dashboard/settings"
                 data-tooltip-target="tooltip-settings"
-                class="inline-flex cursor-pointer justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-900 dark:hover:text-white"
+                class="inline-flex cursor-pointer justify-center rounded p-2 text-gray-400   hover:bg-slate-900 hover:text-white"
               >
                 <svg
                   aria-hidden="true"

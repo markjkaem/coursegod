@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { DocumentHead, Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -13,3 +13,13 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Course God, Cancelled",
+  meta: [
+    {
+      name: "description",
+      content: "Order was cancelled",
+    },
+  ],
+};

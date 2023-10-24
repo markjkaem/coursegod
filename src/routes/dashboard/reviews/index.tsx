@@ -98,9 +98,9 @@ export default component$(() => {
     <>
       <div>
         {review.value.review && (
-          <div class="block w-80 rounded-lg shadow-lg dark:shadow-black/30">
+          <div class="block w-80 rounded-lg shadow-lg shadow-black/30">
             <div class="h-28 overflow-hidden rounded-t-lg bg-[#ddf527]"></div>
-            <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+            <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-neutral-800 bg-neutral-800">
               <Image
                 layout="constrained"
                 width={250}
@@ -132,7 +132,7 @@ export default component$(() => {
         <Form class="mt-10 flex w-80 flex-col gap-2" action={action}>
           <label class="font-bold">Send review (max 100 char.):</label>
           <input
-            class="block w-full rounded-lg border border-white bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            class="block w-full rounded-lg border border-white  bg-gray-700 p-2.5 text-sm  text-white  placeholder-gray-400  focus:border-blue-500  focus:ring-blue-500"
             type="text"
             name="message"
             required

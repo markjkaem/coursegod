@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -153,3 +154,13 @@ export default component$(() => {
     </div>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Course God, Terms",
+  meta: [
+    {
+      name: "description",
+      content: "Terms and Conditions",
+    },
+  ],
+};

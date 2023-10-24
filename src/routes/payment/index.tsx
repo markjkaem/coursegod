@@ -1,7 +1,7 @@
 // import { Session } from "@auth/core/types";
 import { Session } from "@auth/core/types";
 import { component$ } from "@builder.io/qwik";
-import { RequestHandler } from "@builder.io/qwik-city";
+import { DocumentHead, RequestHandler } from "@builder.io/qwik-city";
 import Stripe from "stripe";
 import db from "../../../drizzle/db";
 import { users } from "../../../drizzle/schema";
@@ -78,3 +78,13 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Course God, Payment handling",
+  meta: [
+    {
+      name: "description",
+      content: "Payment handling",
+    },
+  ],
+};

@@ -5,13 +5,13 @@ export default component$(() => {
     <div>
       <section class="">
         <div class="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
-          <h2 class="mb-8 text-center text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white md:text-4xl lg:mb-16">
+          <h2 class="mb-8 text-center text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl lg:mb-16">
             You’ll be in good company
           </h2>
-          <div class="grid grid-cols-2 gap-8 text-gray-500 dark:text-gray-400 sm:gap-12 md:grid-cols-3 lg:grid-cols-6">
+          <div class="grid grid-cols-2 gap-8 text-gray-400 sm:gap-12 md:grid-cols-3 lg:grid-cols-6">
             <a href="#" class="flex items-center justify-center">
               <svg
-                class="h-9 text-white hover:text-gray-900 dark:hover:text-white"
+                class="h-9 text-white "
                 viewBox="0 0 125 35"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ export default component$(() => {
             </a>
             <a href="#" class="flex items-center justify-center">
               <svg
-                class="h-9 text-white hover:text-gray-900 dark:hover:text-white"
+                class="h-9 text-white "
                 viewBox="0 0 86 29"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export default component$(() => {
             </a>
             <a href="#" class="flex items-center justify-center">
               <svg
-                class="h-8 text-white hover:text-gray-900 dark:hover:text-white"
+                class="h-8 text-white "
                 viewBox="0 0 151 34"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ export default component$(() => {
 
             <a href="#" class="flex items-center justify-center">
               <svg
-                class="h-9 text-white hover:text-gray-900 dark:hover:text-white"
+                class="h-9 text-white"
                 viewBox="0 0 124 38"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export default component$(() => {
             </a>
             <a href="#" class="flex items-center justify-center">
               <svg
-                class="h-9 text-white hover:text-gray-900 dark:hover:text-white"
+                class="h-9 text-white "
                 viewBox="0 0 137 37"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ export default component$(() => {
             </a>
             <a href="#" class="flex items-center justify-center">
               <svg
-                class="h-6 text-white hover:text-gray-900 dark:hover:text-white"
+                class="h-6 text-white "
                 viewBox="0 0 124 21"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"

@@ -13,9 +13,9 @@ interface Review {
 
 export default component$(({ reviews }: any) => {
   return (
-    <section class="p-4 text-neutral-700 dark:text-neutral-300">
+    <section class="p-4 text-neutral-300">
       <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl">
-        <h3 class="mb-8 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+        <h3 class="mb-8 text-4xl font-extrabold tracking-tight text-white">
           Testimonials
         </h3>
         <p class="mb-6 pb-2 md:mb-12 md:pb-0">
@@ -27,9 +27,9 @@ export default component$(({ reviews }: any) => {
         {reviews.map((review: Review) => {
           return (
             <div key={review.id}>
-              <div class="block rounded-lg shadow-lg dark:shadow-black/30">
+              <div class="block rounded-lg shadow-lg shadow-black/30">
                 <div class="h-28 overflow-hidden rounded-t-lg bg-[#ddf527]"></div>
-                <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2  border-neutral-800  bg-neutral-800">
                   <Image
                     layout="constrained"
                     width={250}

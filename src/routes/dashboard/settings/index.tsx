@@ -9,7 +9,7 @@ export default component$(() => {
           <div>
             <label
               for="first_name"
-              class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+              class="mb-2 block text-sm font-medium text-white"
             >
               Full name
             </label>
@@ -17,7 +17,7 @@ export default component$(() => {
               value={session.value?.user?.name}
               type="text"
               id="first_name"
-              class="block w-full rounded-lg border border-white bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              class="block w-full rounded-lg border border-white  bg-gray-700 p-2.5 text-sm    text-white placeholder-gray-400  focus:border-blue-500 focus:ring-blue-500"
               placeholder="John"
               disabled
             />
@@ -25,7 +25,7 @@ export default component$(() => {
           <div>
             <label
               for="last_name"
-              class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+              class="mb-2 block text-sm font-medium text-white"
             >
               Email
             </label>
@@ -33,7 +33,7 @@ export default component$(() => {
               value={session.value?.user?.email}
               type="text"
               id="last_name"
-              class="block w-full rounded-lg border border-white bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              class="block w-full rounded-lg border border-white  bg-gray-700 p-2.5 text-sm  text-white  placeholder-gray-400  focus:border-blue-500  focus:ring-blue-500"
               placeholder="Doe"
               disabled
             />
