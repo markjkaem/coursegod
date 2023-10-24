@@ -41,13 +41,15 @@ export const useLink = routeLoader$(async ({ params }) => {
 
 export default component$(() => {
   const chapter = useLink();
-  console.log(chapter.value.source);
   return (
     <div>
       {" "}
       <div>
-        <h1 class="text-2xl font-bold text-white">{chapter.value.title}</h1>
+        <h1 class="text-lg font-bold text-white md:text-2xl">
+          {chapter.value.title}
+        </h1>
         <iframe
+          class="mt-8 h-40 w-80 md:h-96 md:w-4/6"
           width="640"
           height="360"
           src={`https://www.dailymotion.com/embed/video/${chapter.value.source}`}
