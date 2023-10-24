@@ -1,7 +1,6 @@
 import { Session } from "@auth/core/types";
 import { component$ } from "@builder.io/qwik";
 import { Link, RequestHandler } from "@builder.io/qwik-city";
-import { courses } from "~/ultils/courses";
 import { currentSubscription } from "~/ultils/subscriptions";
 import { Image } from "@unpic/qwik";
 
