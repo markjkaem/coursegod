@@ -33,8 +33,8 @@ export default component$(() => {
     <div class="grid min-h-screen grid-cols-1 gap-2 text-white lg:flex">
       <div class="w-full justify-center p-2 lg:w-4/6 lg:p-4">
         <div>
-          <div class="m-auto w-full lg:w-8/12">
-            <div class="">
+          <article class="m-auto w-full lg:w-8/12">
+            <header>
               <div class="flex justify-between">
                 <div class="flex items-center">
                   <Image
@@ -48,11 +48,11 @@ export default component$(() => {
 
                   <div class="flex flex-col">
                     <p class="ml-2 text-sm font-medium lg:text-base">
-                      {blogs.value.blogs[0].author}
+                      {blogs?.value.blogs[0]?.author}
                     </p>
                     <p class="ml-2 text-sm font-normal text-white lg:text-base">
                       {" "}
-                      {dayjs(blogs.value.blogs[0].date).format("YYYY-MM-DD")}
+                      {dayjs(blogs?.value.blogs[0]?.date).format("YYYY-MM-DD")}
                     </p>
                   </div>
                 </div>
@@ -78,57 +78,65 @@ export default component$(() => {
                 </div>
               </div>
               <div class="mt-4 flex items-center text-white">
-                <span class="text-2xl font-bold text-white lg:text-4xl">
-                  {blogs.value.blogs[0].title}
-                </span>
+                <h1 class="text-2xl font-bold text-white lg:text-4xl">
+                  {blogs.value.blogs[0]?.title}
+                </h1>
               </div>
-            </div>
-            <div class="mt-4 flex h-52 max-w-4xl">
-              <Image
-                loading="eager"
-                height={600}
-                width={600}
-                src={`/${blogs.value.blogs[0].image}`}
-                alt="blog_banner"
-                class="mt-4 w-full object-cover "
-              />
-            </div>
+            </header>
+            <main>
+              <div class="mt-4 flex h-52 max-w-4xl">
+                <Image
+                  loading="eager"
+                  height={600}
+                  width={600}
+                  src={`/${blogs.value.blogs[0]?.image}`}
+                  alt="blog_banner"
+                  class="mt-4 w-full object-cover "
+                />
+              </div>
 
-            <div class="m-auto mt-10 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0].intro}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0].text1}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0].text2}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0]?.text3}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0]?.text4}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0]?.text5}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0]?.text6}
-            </div>
-            <div class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
-              {blogs.value.blogs[0]?.text7}
-            </div>
-            <div class="mt-8 w-80">
-              {" "}
-              <Link href="/#pricing">
-                <div class="flex p-6 lg:p-0">
-                  <button class="mt-4 w-full rounded-full border bg-[#ddf527]  p-2 text-black transition">
-                    Get acces to courses now
-                  </button>
-                </div>
-              </Link>
-            </div>
-          </div>
+              <p class="m-auto mt-10 flex w-full flex-col justify-center text-2xl font-bold text-white ">
+                {blogs.value.blogs[0]?.intro}
+              </p>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text1}
+              </p>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text2}
+              </p>
+              <h2 class="m-auto mt-8 flex w-full flex-col justify-center  text-3xl font-bold text-white ">
+                {blogs.value.blogs[0]?.header1}
+              </h2>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text3}
+              </p>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text4}
+              </p>
+              <h2 class="m-auto mt-8 flex w-full flex-col justify-center text-3xl font-bold text-white ">
+                {blogs.value.blogs[0]?.header2}
+              </h2>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text5}
+              </p>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text6}
+              </p>
+              <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
+                {blogs.value.blogs[0]?.text7}
+              </p>
+              <div class="mt-8 w-80">
+                {" "}
+                <Link href="/#pricing">
+                  <div class="flex p-6 lg:p-0">
+                    <button class="mt-4 w-full rounded-full border bg-[#ddf527]  p-2 text-black transition">
+                      Get acces to courses now
+                    </button>
+                  </div>
+                </Link>
+              </div>
+            </main>
+          </article>
         </div>
       </div>
       <div class="w-full p-6 lg:w-2/12 lg:p-0">
