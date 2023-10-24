@@ -33,7 +33,7 @@ export default component$(() => {
               width={200}
               height={200}
               class="h-10 w-10"
-              src="/MWlogo.png"
+              src="/cg.png"
               alt="MW"
             />
           </Link>
