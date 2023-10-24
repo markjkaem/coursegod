@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "Demo App with Routing built-in (recommended)",
+  "name": "Course God",
+  "description": "A website for selling online courses about making money",
   "engines": {
     "node": ">=15.0.0"
   },
