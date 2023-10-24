@@ -48,7 +48,7 @@ export default component$(() => {
         {course.value.chapters?.map((chapter) => {
           return (
             <Link
-              class="w-3/6 bg-slate-800 px-4 py-2 hover:bg-slate-700"
+              class="w-80 bg-slate-800 px-4 py-2 hover:bg-slate-700 md:w-3/6"
               href={`/dashboard/courses/${course.value.title}/${chapter.id}`}
             >
               {chapter.title}
