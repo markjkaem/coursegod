@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Link, routeLoader$ } from "@builder.io/qwik-city";
+import { routeLoader$ } from "@builder.io/qwik-city";
 import { courses } from "~/ultils/courses";
 import { Session } from "@auth/core/types";
 import { RequestHandler } from "@builder.io/qwik-city";
@@ -29,7 +29,7 @@ export const useLink = routeLoader$(async ({ params }) => {
   console.log(params);
   const course = correctCourse[0].chapters?.filter(
     (chapter) => chapter.id === Number(params.chapter),
-  )!;
+  );
   console.log(course);
   const chapter = course[0];
 
