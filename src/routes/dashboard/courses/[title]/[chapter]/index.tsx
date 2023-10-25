@@ -26,11 +26,11 @@ export const useLink = routeLoader$(async ({ params }) => {
   const correctCourse = courses.filter(
     (course) => course.title === params.title,
   );
-  console.log(params);
+
   const course = correctCourse[0].chapters?.filter(
     (chapter) => chapter.id === Number(params.chapter),
   );
-  console.log(course);
+
   const chapter = course[0];
 
   return {
