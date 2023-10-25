@@ -24,7 +24,7 @@ export default component$(() => {
               Blogs
             </Link>
           </div>
-          <span>Made with ♡ by Builder.io</span>
+          <span>CourseGod 2023 ©</span>
           <span class={styles.spacer}>|</span>
           <span>{serverTime.value.date}</span>
         </div>
