@@ -9,7 +9,7 @@ export default component$(() => {
   const signIn = useAuthSignin();
   const redirectUrl = useQuery();
   //  TODO: DO THIS
-
+  console.log(redirectUrl.value);
   return (
     <>
       <section class="">
