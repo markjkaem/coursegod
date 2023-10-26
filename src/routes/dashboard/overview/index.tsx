@@ -1,15 +1,10 @@
-import { component$, useStore } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { useAuthSession } from "~/routes/plugin@auth";
 import { Image } from "@unpic/qwik";
 
 export default component$(() => {
   const session = useAuthSession();
-  const store = useStore({
-    line: {
-      direction: "to right",
-    },
-  });
   return (
     <>
       <div>
