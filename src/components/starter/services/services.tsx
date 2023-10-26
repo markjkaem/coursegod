@@ -4,7 +4,7 @@ import { JSX } from "@builder.io/qwik/jsx-runtime";
 export default component$(() => {
   return (
     <div id="services">
-      <section class="pb-12 pt-20 lg:pb-[90px] lg:pt-[120px]">
+      <section class="pb-12 pt-20 text-white lg:pb-[90px] lg:pt-[120px]">
         <div class="">
           <div class="-mx-4 flex flex-wrap">
             <div class="w-full px-4">
@@ -180,7 +180,7 @@ const ServiceCard = ({
 }) => {
   return (
     <>
-      <div class="w-full px-1 md:w-1/2 md:px-4 lg:w-1/3">
+      <div class="w-full px-1 text-white md:w-1/2 md:px-4 lg:w-1/3">
         <div class="mb-8 rounded-[20px] p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10">
           <div
             class={`bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl p-3`}
