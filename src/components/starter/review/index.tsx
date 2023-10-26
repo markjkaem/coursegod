@@ -13,7 +13,7 @@ interface Review {
 
 export default component$(({ reviews }: any) => {
   return (
-    <section class="p-4 text-neutral-300">
+    <section class="p-4 text-white">
       <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl">
         <h3 class="mb-8 text-4xl font-extrabold tracking-tight text-white">
           Testimonials
@@ -27,7 +27,10 @@ export default component$(({ reviews }: any) => {
         {reviews.map((review: Review) => {
           return (
             <div key={review.id}>
-              <div class="block rounded-lg shadow-lg shadow-black/30">
+              <div class="group relative block rounded-lg shadow-lg shadow-black/30">
+                <div
+                  class={`group-hover:animate-moveline absolute left-0 top-0 z-20 h-[1px] bg-transparent group-hover:w-[2rem] group-hover:bg-blue-500`}
+                ></div>
                 <div class="h-28 overflow-hidden rounded-t-lg bg-[#ddf527]"></div>
                 <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2  border-neutral-800  bg-neutral-800">
                   <Image
