@@ -23,6 +23,17 @@ export default component$(() => {
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
         <ServiceWorkerRegister />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CPG5R91B1N"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPG5R91B1N')`}
+        </script>
       </head>
       <body lang="en">
         {/*  <!-- Start of HubSpot Embed Code --> */}
