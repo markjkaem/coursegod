@@ -1,9 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import { useAuthSignin } from "../plugin@auth";
-import { DocumentHead, Form } from "@builder.io/qwik-city";
+import { DocumentHead, Form, routeLoader$ } from "@builder.io/qwik-city";
 
 export default component$(() => {
+  const useQuery = routeLoader$(({ query }) => {
+    return { query: query.get("redirect_url") };
+  });
   const signIn = useAuthSignin();
+  const redirectUrl = useQuery();
+  //  TODO: DO THIS
+
   return (
     <>
       <section class="">
@@ -21,7 +27,7 @@ export default component$(() => {
                   <input
                     type="hidden"
                     name="options.callbackUrl"
-                    value="/dashboard/overview"
+                    value={`/dashboard/overview`}
                   />
                   <button class="focus:ring-[#4285F4]/55 mr-2 inline-flex h-10 w-48 items-center rounded-lg bg-[#4285F4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50">
                     <svg
