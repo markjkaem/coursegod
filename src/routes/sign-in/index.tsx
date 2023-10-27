@@ -2,15 +2,9 @@ import { component$ } from "@builder.io/qwik";
 import { useAuthSignin } from "../plugin@auth";
 import { DocumentHead, Form, routeLoader$ } from "@builder.io/qwik-city";
 
-const useQuery = routeLoader$(({ query }) => {
-  return { query: query.get("redirect_url") };
-});
-
 export default component$(() => {
   const signIn = useAuthSignin();
-  const redirectUrl = useQuery();
-  //  TODO: DO THIS
-  console.log(redirectUrl.value);
+
   return (
     <>
       <section class="">
