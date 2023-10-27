@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { useAuthSignin } from "../plugin@auth";
-import { DocumentHead, Form, routeLoader$ } from "@builder.io/qwik-city";
+import { DocumentHead, Form } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const signIn = useAuthSignin();
