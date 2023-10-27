@@ -29,7 +29,7 @@ export const head: DocumentHead = {
 
 export default component$(() => {
   const subscriptionStatus = useSubscriptionStatus();
-  const hasAccesToCourses = subscriptionStatus.value.courses ?? false;
+  const hasAccesToCourses = subscriptionStatus.value?.courses ?? false;
   return (
     <div class="flex min-h-screen w-screen ">
       <div class="md:w-3/12">
