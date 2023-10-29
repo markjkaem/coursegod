@@ -3,9 +3,8 @@ import Stripe from "stripe";
 import db from "../../drizzle/db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import { env } from "process";
 
-const stripe = new Stripe(env.STRIPE_TEST_KEY!, {
+const stripe = new Stripe(process.env.STRIPE_TEST_KEY!, {
   apiVersion: "2023-10-16",
 });
 
