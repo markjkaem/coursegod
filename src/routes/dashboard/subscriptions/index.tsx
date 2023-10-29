@@ -9,13 +9,13 @@ import { Session } from "@auth/core/types";
 import { currentSubscription } from "~/ultils/subscriptions";
 
 export const useSubscriptionStatus = routeLoader$(
-  async ({ sharedMap, url, redirect }) => {
+  async ({ sharedMap, url, redirect, env }) => {
     const authSession: Session | null = sharedMap.get("session");
     if (!authSession || new Date(authSession.expires) < new Date()) {
       throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
     }
     const email = authSession.user?.email;
-    const response = await currentSubscription(email as string);
+    const response = await currentSubscription(email as string, env);
     return response;
   },
 );
