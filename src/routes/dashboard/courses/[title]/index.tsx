@@ -9,14 +9,13 @@ export const onRequest: RequestHandler = async ({
   sharedMap,
   redirect,
   url,
-  env,
 }) => {
   const authSession: Session | null = sharedMap.get("session");
   if (!authSession || new Date(authSession.expires) < new Date()) {
     throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
   }
   const email = authSession.user?.email;
-  const response = await currentSubscription(email as string, env);
+  const response = await currentSubscription(email as string);
   const hasPageAcces = response.courses;
   if (!hasPageAcces) {
     throw redirect(303, "/dashboard/subscriptions");

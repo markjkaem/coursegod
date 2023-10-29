@@ -15,7 +15,7 @@ export const useSubscriptionStatus = routeLoader$(
       throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
     }
     const email = authSession.user?.email;
-    const response = await currentSubscription(email as string, env);
+    const response = await currentSubscription(email as string);
     return response;
   },
 );
