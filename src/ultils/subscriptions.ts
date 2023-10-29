@@ -3,7 +3,6 @@ import Stripe from "stripe";
 import db from "../../drizzle/db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import { env } from "process";
 import { EnvGetter } from "@builder.io/qwik-city/middleware/request-handler";
 
 export const subscriptionList = {
