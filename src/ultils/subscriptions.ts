@@ -4,8 +4,6 @@ import db from "../../drizzle/db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
 import { env } from "process";
-import { EnvGetter } from "@builder.io/qwik-city/middleware/request-handler";
-
 
 const stripe = new Stripe(env.STRIPE_TEST_KEY!, {
   apiVersion: "2023-10-16",
