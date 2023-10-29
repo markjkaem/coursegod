@@ -3,8 +3,13 @@ import Stripe from "stripe";
 import db from "../../drizzle/db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
+import { env } from "process";
 import { EnvGetter } from "@builder.io/qwik-city/middleware/request-handler";
 
+
+const stripe = new Stripe(env.STRIPE_TEST_KEY!, {
+  apiVersion: "2023-10-16",
+});
 
 export const subscriptionList = {
   normal: {
@@ -43,10 +48,8 @@ export const filterSubscriptions = (subscriptions: any) => {
       return {isLegendPlan, isPremiumPlan, isNormalPlan}
       }
 
-export const currentSubscription = async (email: string, env: EnvGetter) => {
-  const stripe = new Stripe(env.get("STRIPE_TEST_KEY")!, {
-    apiVersion: "2023-10-16",
-  });
+export const currentSubscription = async (email: string) => {
+ 
     const user = await db
       .select()
       .from(users)
