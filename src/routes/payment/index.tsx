@@ -7,13 +7,6 @@ import db from "../../../drizzle/db";
 import { users } from "../../../drizzle/schema";
 import { eq } from "drizzle-orm";
 
-const stripe = new Stripe(
-  "sk_test_51L34nrJ0Tu9paWkW9sF0gCPGB55l3fncgRlFJmF2Lcr4xEUdCMuUtQnYang1GsxdZAmw9AaTC6vHgJHPhNMAsDDA000WqYNd73",
-  {
-    apiVersion: "2023-10-16",
-  },
-);
-
 export const onRequest: RequestHandler = async ({
   redirect,
   sharedMap,
@@ -21,6 +14,9 @@ export const onRequest: RequestHandler = async ({
   url,
   env,
 }) => {
+  const stripe = new Stripe(env.get("STRIPE_TEST_KEY")!, {
+    apiVersion: "2023-10-16",
+  });
   const authSession: Session | null = sharedMap.get("session");
   const lookupKey = query.get("id");
   if (!lookupKey) {

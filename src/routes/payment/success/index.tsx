@@ -4,13 +4,6 @@ import { component$ } from "@builder.io/qwik";
 import { DocumentHead, RequestHandler } from "@builder.io/qwik-city";
 import Stripe from "stripe";
 
-const stripe = new Stripe(
-  "sk_test_51L34nrJ0Tu9paWkW9sF0gCPGB55l3fncgRlFJmF2Lcr4xEUdCMuUtQnYang1GsxdZAmw9AaTC6vHgJHPhNMAsDDA000WqYNd73",
-  {
-    apiVersion: "2023-10-16",
-  },
-);
-
 export const onRequest: RequestHandler = async ({
   redirect,
   query,
@@ -18,6 +11,9 @@ export const onRequest: RequestHandler = async ({
   url,
   env,
 }) => {
+  const stripe = new Stripe(env.get("STRIPE_TEST_KEY")!, {
+    apiVersion: "2023-10-16",
+  });
   const authSession: Session | null = sharedMap.get("session");
   if (!authSession || new Date(authSession.expires) < new Date()) {
     throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
