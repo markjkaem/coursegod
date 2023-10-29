@@ -9,7 +9,7 @@ import { Session } from "@auth/core/types";
 import { currentSubscription } from "~/ultils/subscriptions";
 
 export const useSubscriptionStatus = routeLoader$(
-  async ({ sharedMap, url, redirect, env }) => {
+  async ({ sharedMap, url, redirect }) => {
     const authSession: Session | null = sharedMap.get("session");
     if (!authSession || new Date(authSession.expires) < new Date()) {
       throw redirect(302, `/sign-in?callbackUrl=${url.pathname}`);
