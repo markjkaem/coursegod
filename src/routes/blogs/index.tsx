@@ -125,7 +125,7 @@ export default component$(() => {
               <p class="m-auto mt-2 flex w-full flex-col justify-center text-xl text-white ">
                 {blogs.value.blogs[0]?.text7}
               </p>
-              <div class="mt-8 w-80">
+              <div class="mt-8 hidden w-80 md:flex">
                 {" "}
                 <Link href="/#pricing">
                   <div class="flex p-6 lg:p-0">
