@@ -8,16 +8,16 @@ import { EnvGetter } from "@builder.io/qwik-city/middleware/request-handler";
 export const subscriptionList = {
   normal: {
     type: "Normal",
-    id: "price_1O2BnGJ0Tu9paWkWF45pLKC4",
+    id: "price_1O6a75J0Tu9paWkWipBezZZs",
   },
   premium: {
     type: "Premium",
-    id: "price_1O2Bo6J0Tu9paWkWpeXt2hMP",
+    id: "price_1O6a70J0Tu9paWkWWisf4krl",
   },
 
   legend: {
     type: "Legend",
-    id: "price_1O2Ml8J0Tu9paWkWxLrkwLp4",
+    id: "price_1O6a6sJ0Tu9paWkWiusY2bFM",
   },
 };
 

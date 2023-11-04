@@ -85,7 +85,7 @@ export default component$(() => {
             </li>
           </ul>
           <Link
-            href="/payment?id=price_1O2BnGJ0Tu9paWkWF45pLKC4"
+            href="/payment?id=price_1O6a75J0Tu9paWkWipBezZZs"
             class="bg-primary-600 hover:bg-primary-700 focus:ring-primary-900 rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white transition hover:bg-gray-300 hover:text-black focus:ring-4"
           >
             Get started
@@ -167,7 +167,7 @@ export default component$(() => {
             </li>
           </ul>
           <Link
-            href="/payment?id=price_1O2Bo6J0Tu9paWkWpeXt2hMP"
+            href="/payment?id=price_1O6a70J0Tu9paWkWWisf4krl"
             class="bg-primary-600 focus:ring-primary-200 focus:ring-primary-900 rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white transition hover:bg-gray-300 hover:text-black  focus:ring-4"
           >
             Get started
@@ -249,7 +249,7 @@ export default component$(() => {
             </li>
           </ul>
           <Link
-            href="/payment?id=price_1O2Ml8J0Tu9paWkWxLrkwLp4"
+            href="/payment?id=price_1O6a6sJ0Tu9paWkWiusY2bFM"
             class="bg-primary-600 hover:bg-primary-700 focus:ring-primary-200 focus:ring-primary-900 rounded-lg px-5 py-2.5 text-center text-sm font-medium  text-white transition hover:bg-gray-300 hover:text-black  focus:ring-4"
           >
             Get started
