@@ -5,6 +5,7 @@ import { Image } from "@unpic/qwik";
 
 export default component$(() => {
   const session = useAuthSession();
+
   return (
     <>
       <div>
@@ -13,7 +14,7 @@ export default component$(() => {
           <Link href={`/dashboard/subscriptions`}>
             <div class="group relative w-80 rounded-lg border border-gray-600 bg-slate-900 p-2  shadow hover:bg-slate-800">
               <div
-                class={`group-hover:animate-moveline absolute left-0 top-0 z-20 h-[1px] bg-transparent group-hover:w-[2rem] group-hover:bg-white`}
+                class={`absolute left-0 top-0 z-20 h-[1px] bg-transparent group-hover:w-[2rem] group-hover:animate-moveline group-hover:bg-white`}
               ></div>
               <div class="relative">
                 <Image
@@ -42,7 +43,7 @@ export default component$(() => {
           <Link href={`/dashboard/courses`}>
             <div class=" group relative w-80 rounded-lg border border-gray-600 bg-slate-900 p-2  shadow hover:bg-slate-800">
               <div
-                class={`group-hover:animate-moveline absolute left-0 top-0 z-20 h-[1px] bg-transparent group-hover:w-[2rem] group-hover:bg-white`}
+                class={`absolute left-0 top-0 z-20 h-[1px] bg-transparent group-hover:w-[2rem] group-hover:animate-moveline group-hover:bg-white`}
               ></div>
               <Image
                 layout="constrained"
