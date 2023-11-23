@@ -3,26 +3,28 @@ import Stripe from "stripe";
 import db from "../../drizzle/db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import { EnvGetter } from "@builder.io/qwik-city/middleware/request-handler";
-
-export const subscriptionList = {
-  normal: {
-    type: "Normal",
-    id: "price_1O6a75J0Tu9paWkWipBezZZs",
-  },
-  premium: {
-    type: "Premium",
-    id: "price_1O6a70J0Tu9paWkWWisf4krl",
-  },
-
-  legend: {
-    type: "Legend",
-    id: "price_1O6a6sJ0Tu9paWkWiusY2bFM",
-  },
-};
+import type { EnvGetter } from "@builder.io/qwik-city/middleware/request-handler";
 
 
-export const filterSubscriptions = (subscriptions: any) => {
+
+
+export const filterSubscriptions = (subscriptions: any, env: EnvGetter) => {
+
+  const subscriptionList = {
+    normal: {
+      type: "Normal",
+      id:  env.get("SUBSCRIPTION1"),
+    },
+    premium: {
+      type: "Premium",
+      id: env.get("SUBSCRIPTION2"),
+    },
+  
+    legend: {
+      type: "Legend",
+      id: env.get("SUBSCRIPTION3"),
+    },
+  };
     const activeSubscriptions = subscriptions.data.filter(
         (item: any) => item.status === "active",
       );
@@ -39,7 +41,7 @@ export const filterSubscriptions = (subscriptions: any) => {
       const isNormalPlan = activeSubscriptionIds.filter(
         (id: any) => id === subscriptionList.normal.id,
       );
-      return {isLegendPlan, isPremiumPlan, isNormalPlan}
+      return {isLegendPlan, isPremiumPlan, isNormalPlan, subscriptionList: subscriptionList}
       }
 
 export const currentSubscription = async (email: string, env: EnvGetter) => {
@@ -59,8 +61,8 @@ export const currentSubscription = async (email: string, env: EnvGetter) => {
     const subscriptions = await stripe.subscriptions.list({
       customer: user[0].stripe_id as string,
     });
-    const { isLegendPlan, isNormalPlan, isPremiumPlan } =
-      filterSubscriptions(subscriptions);
+    const { isLegendPlan, isNormalPlan, isPremiumPlan, subscriptionList } =
+      filterSubscriptions(subscriptions, env);
 
     if (isLegendPlan[0]) {
       return {

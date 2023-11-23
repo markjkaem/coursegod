@@ -5,7 +5,7 @@ import Stripe from "stripe";
 import db from "../../../../drizzle/db";
 import { users } from "../../../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import { Session } from "@auth/core/types";
+import type { Session } from "@auth/core/types";
 import { currentSubscription } from "~/ultils/subscriptions";
 
 export const useSubscriptionStatus = routeLoader$(
@@ -19,6 +19,14 @@ export const useSubscriptionStatus = routeLoader$(
     return response;
   },
 );
+
+export const useSubscriptions = routeLoader$(({env}) => {
+  return {
+    subscription1: env.get("SUBSCRIPTION1"),
+    subscription2: env.get("SUBSCRIPTION2"),
+    subscription3: env.get("SUBSCRIPTION3") 
+  };
+});
 
 export const useSubscriptionData = routeLoader$(
   async ({ sharedMap, redirect, url, env }) => {
@@ -57,6 +65,8 @@ export default component$(() => {
   const url = subscriptionData.value.url;
   const subscriptionstatus = useSubscriptionStatus();
   const status = subscriptionstatus.value.plan;
+  const subscriptions = useSubscriptions()
+
   console.log(status);
 
   return (
@@ -109,7 +119,7 @@ export default component$(() => {
         </div>
       </div>
       <div id="pricing" class="mt-10">
-        <Pricing />
+        <Pricing subscriptions={subscriptions.value} />
       </div>
     </>
   );
