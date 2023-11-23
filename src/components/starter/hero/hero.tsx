@@ -8,7 +8,7 @@ export default component$(() => {
       <span class="-z-10 text-5xl font-extrabold leading-tight tracking-tight text-white drop-shadow-lg md:text-7xl">
         Top Trending <span class="highlight">Money</span>
         <br />
-        Making <span class="highlight">Methods</span>
+        Making <span class="highlight">Courses</span>
       </span>
       <p>Discover the latest courses, and learn how other people make bank</p>
       <div class={styles["button-group"]}>

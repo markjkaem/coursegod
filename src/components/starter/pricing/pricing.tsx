@@ -1,7 +1,17 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
-export default component$(() => {
+
+interface Subscriptions{
+  subscription1: string | undefined
+  subscription2: string | undefined
+  subscription3: string | undefined
+  
+}
+
+export default component$(({subscriptions}:{subscriptions: Subscriptions}) => {
+  
+
   return (
     <div id="pricing" class="container-purple container-center container">
       <h2 class="mt-6 text-5xl font-bold text-black">
@@ -85,7 +95,7 @@ export default component$(() => {
             </li>
           </ul>
           <Link
-            href="/payment?id=price_1O6a75J0Tu9paWkWipBezZZs"
+           href={`/payment?id=${subscriptions.subscription1}`}
             class="bg-primary-600 hover:bg-primary-700 focus:ring-primary-900 rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white transition hover:bg-gray-300 hover:text-black focus:ring-4"
           >
             Get started
@@ -167,7 +177,7 @@ export default component$(() => {
             </li>
           </ul>
           <Link
-            href="/payment?id=price_1O6a70J0Tu9paWkWWisf4krl"
+          href={`/payment?id=${subscriptions.subscription2}`}
             class="bg-primary-600 focus:ring-primary-200 focus:ring-primary-900 rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white transition hover:bg-gray-300 hover:text-black  focus:ring-4"
           >
             Get started
@@ -249,7 +259,7 @@ export default component$(() => {
             </li>
           </ul>
           <Link
-            href="/payment?id=price_1O6a6sJ0Tu9paWkWiusY2bFM"
+           href={`/payment?id=${subscriptions.subscription3}`}
             class="bg-primary-600 hover:bg-primary-700 focus:ring-primary-200 focus:ring-primary-900 rounded-lg px-5 py-2.5 text-center text-sm font-medium  text-white transition hover:bg-gray-300 hover:text-black  focus:ring-4"
           >
             Get started
