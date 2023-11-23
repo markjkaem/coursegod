@@ -177,11 +177,11 @@ export default component$(() => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  Are the courses downloadable, and do you add new ones
+                  Can i view the courses as video, and do you add new ones
                   regularly?
                 </h3>
                 <p>
-                  Yes, all our courses are downloadable, and we continually add
+                  Yes, all our courses are viewable, and we continually add
                   new ones every month, providing fresh content for our
                   subscribers.
                 </p>
