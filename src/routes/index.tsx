@@ -19,8 +19,17 @@ export const useReviews = routeLoader$(async () => {
   };
 });
 
+export const useSubscriptions = routeLoader$(({env}) => {
+  return {
+    subscription1: env.get("SUBSCRIPTION1"),
+    subscription2: env.get("SUBSCRIPTION2"),
+    subscription3: env.get("SUBSCRIPTION3") 
+  };
+});
+
 export default component$(() => {
   const reviews = useReviews();
+  const subscriptions = useSubscriptions()
   return (
     <>
       <div role="presentation" class="ellipsis"></div>
@@ -31,7 +40,7 @@ export default component$(() => {
       <div class="container-center container-spacing-xl container">
         <Services />
       </div>
-      <Pricing />
+      <Pricing subscriptions={subscriptions.value} />
       <Companies />
       <div class="container-center container-spacing-xl container">
         <Review reviews={reviews.value.reviews} />
