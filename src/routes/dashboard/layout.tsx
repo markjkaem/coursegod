@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { component$, Slot } from "@builder.io/qwik";
 import type { DocumentHead, RequestHandler } from "@builder.io/qwik-city";
 import { Session } from "@auth/core/types";

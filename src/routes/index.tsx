@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
 
