@@ -33,6 +33,7 @@
     "@unpic/qwik": "^0.0.27",
     "@vercel/blob": "^0.14.0",
     "dayjs": "^1.11.10",
+    "deasync": "^0.1.30",
     "dotenv": "^16.3.1",
     "drizzle-orm": "^0.27.2",
     "drizzle-zod": "^0.4.4",
