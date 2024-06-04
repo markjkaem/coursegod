@@ -1,3 +1,4 @@
+// @ts-ignore
 import { component$, useStore } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { useAuthSession } from "~/routes/plugin@auth";
