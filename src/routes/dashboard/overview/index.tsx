@@ -10,7 +10,7 @@ export default component$(() => {
     <>
       <div>
         <span class="text-3xl text-white">Hi, {session.value?.user?.name}</span>
-        <div class="mt-10 grid w-4/6 grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="mt-10 grid w-5/6 grid-cols-1 gap-8 md:grid-cols-2">
           <Link href={`/dashboard/subscriptions`}>
             <div class="group relative w-80 rounded-lg border border-gray-600 bg-slate-900 p-2  shadow hover:bg-slate-800">
               <div
