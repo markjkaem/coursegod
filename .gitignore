@@ -50,3 +50,7 @@ functions/node_modules
 
 # Cloudflare
 functions/**/*.js
+
+bfg.jar
+private.txt
+..bfg-report
